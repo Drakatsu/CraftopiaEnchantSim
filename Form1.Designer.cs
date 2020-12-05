@@ -174,7 +174,7 @@ namespace WindowsFormsApp1
             this.EnchantStatHead4.Name = "EnchantStatHead4";
             this.EnchantStatHead4.Size = new System.Drawing.Size(35, 13);
             this.EnchantStatHead4.TabIndex = 9;
-            this.EnchantStatHead4.Text = "label5";
+            this.EnchantStatHead4.Text = "--No Enchant--";
             // 
             // EnchantStatHead3
             // 
@@ -183,7 +183,7 @@ namespace WindowsFormsApp1
             this.EnchantStatHead3.Name = "EnchantStatHead3";
             this.EnchantStatHead3.Size = new System.Drawing.Size(35, 13);
             this.EnchantStatHead3.TabIndex = 8;
-            this.EnchantStatHead3.Text = "label4";
+            this.EnchantStatHead3.Text = "--No Enchant--";
             // 
             // EnchantStatHead2
             // 
@@ -192,7 +192,7 @@ namespace WindowsFormsApp1
             this.EnchantStatHead2.Name = "EnchantStatHead2";
             this.EnchantStatHead2.Size = new System.Drawing.Size(35, 13);
             this.EnchantStatHead2.TabIndex = 7;
-            this.EnchantStatHead2.Text = "label3";
+            this.EnchantStatHead2.Text = "--No Enchant--";
             // 
             // EnchantStatHead1
             // 
@@ -201,7 +201,7 @@ namespace WindowsFormsApp1
             this.EnchantStatHead1.Name = "EnchantStatHead1";
             this.EnchantStatHead1.Size = new System.Drawing.Size(35, 13);
             this.EnchantStatHead1.TabIndex = 6;
-            this.EnchantStatHead1.Text = "label2";
+            this.EnchantStatHead1.Text = "--No Enchant--";
             this.EnchantStatHead1.Click += new System.EventHandler(this.label2_Click);
             // 
             // EquipStatHead
@@ -211,7 +211,7 @@ namespace WindowsFormsApp1
             this.EquipStatHead.Name = "EquipStatHead";
             this.EquipStatHead.Size = new System.Drawing.Size(90, 13);
             this.EquipStatHead.TabIndex = 5;
-            this.EquipStatHead.Text = "The Second Test";
+            this.EquipStatHead.Text = "--No Equipment--";
             this.EquipStatHead.Click += new System.EventHandler(this.label1_Click);
             // 
             // EnchantHead4
@@ -1044,11 +1044,23 @@ namespace WindowsFormsApp1
             EquipmentLibrary EqLib = new EquipmentLibrary();
 
             //Nested foreach to populate 
-            // foreach (Equipment eq in EqLib.Head) HeadEquip.Items.Add(eq.name);
+            //foreach (Equipment eq in EqLib.Head) HeadEquip.Items.Add(eq.name);
 
 
         }
 
+        #endregion
+
+        #region Get functions
+        public Enchant getEnchant(string n, HashSet<Enchant> EnList)
+        {
+            foreach (Enchant en in EnList)
+                if (n == en.name)
+                {
+                    return en;
+                }
+            return null;
+        }
         #endregion
 
         #region quick control methods
@@ -1080,21 +1092,149 @@ namespace WindowsFormsApp1
 
 
         /*
-         * Method to show the stats of selected enchant
-         * Simply pass the enchantment name and the label attached to the box
+         * Method that returns single string consisting of visible data of all buffs/debuffs of an enchant
+         * Does not show 0's
          */
-        /*WIP
-         * public void showEnStats(string n, System.Windows.Forms.Label eBoxL)
+        public string getEnStats(Enchant e)
         {
-            foreach (Enchant en in )
+            /*
+            if (e. != 0)
             {
-                if (n == en.name)
-                {
-
-                }
+                stats += " ";
+                if (e. > 0) stats += "+";
+                stats += e. + "";
             }
-        }*/
+             */
+            string stats = "";
 
+            if (e.atk_Static != 0)
+            {
+                stats += " ";
+                if (e.atk_Static > 0) stats += "+";
+                stats += e.atk_Static + " Atk";
+            }
+
+            if (e.atk_Percent != 0)
+            {
+                stats += " ";
+                if (e.atk_Percent > 0) stats += "+";
+                stats += e.atk_Percent + "% Atk";
+            }
+
+            if (e.def_Static != 0)
+            {
+                stats += " ";
+                if (e.def_Static > 0) stats += "+";
+                stats += e.def_Static + " Def";
+            }
+            
+            if (e.def_Percent != 0)
+            {
+                stats += " ";
+                if (e.def_Percent > 0) stats += "+";
+                stats += e.def_Percent + "% Def";
+            }
+
+            if (e.matk_Static != 0)
+            {
+                stats += " ";
+                if (e.matk_Static > 0) stats += "+";
+                stats += e.matk_Static + " MAtk";
+            }
+
+            if (e.matk_Percent != 0)
+            {
+                stats += " ";
+                if (e.matk_Percent > 0) stats += "+";
+                stats += e.matk_Percent + "% MAtk";
+            }
+
+            if (e.crit_Damage != 0)
+            {
+                stats += " ";
+                if (e.crit_Damage > 0) stats += "+";
+                stats += e.crit_Damage + "% crit dmg";
+            }
+
+            if (e.crit_Chance != 0)
+            {
+                stats += " ";
+                if (e.crit_Chance > 0) stats += "+";
+                stats += e.crit_Chance + "% crit chance";
+            }
+
+            if (e.move_Speed != 0)
+            {
+                stats += " ";
+                if (e.move_Speed > 0) stats += "+";
+                stats += e.move_Speed + " Move Spd";
+            }
+
+            if (e.atk_Speed != 0)
+            {
+                stats += " ";
+                if (e.atk_Speed > 0) stats += "+";
+                stats += e.atk_Speed + " Atk Spd";
+            }
+
+            if (e.mana_Static != 0)
+            {
+                stats += " ";
+                if (e.mana_Static > 0) stats += "+";
+                stats += e.mana_Static + " Mana";
+            }
+
+            if (e.mana_Percent != 0)
+            {
+                stats += " ";
+                if (e.mana_Percent > 0) stats += "+";
+                stats += e.mana_Percent + "% Mana";
+            }
+
+            if (e.stam_Static != 0)
+            {
+                stats += " ";
+                if (e.stam_Static > 0) stats += "+";
+                stats += e.stam_Static + " Stam";
+            }
+
+            if (e.stam_Percent != 0)
+            {
+                stats += " ";
+                if (e.stam_Percent > 0) stats += "+";
+                stats += e.stam_Percent + "% Stam";
+            }
+
+            if (e.life_Static != 0)
+            {
+                stats += " ";
+                if (e.life_Static > 0) stats += "+";
+                stats += e.life_Static + " HP";
+            }
+
+            if (e.life_Percent != 0)
+            {
+                stats += " ";
+                if (e.life_Percent > 0) stats += "+";
+                stats += e.life_Percent + "% HP";
+            }
+
+            if (e.hung_Static != 0)
+            {
+                stats += " ";
+                if (e.hung_Static > 0) stats += "+";
+                stats += e.hung_Static + " Sat";
+            }
+
+            if (e.hung_Percent != 0)
+            {
+                stats += " ";
+                if (e.hung_Percent > 0) stats += "+";
+                stats += e.hung_Percent + "% Sat";
+            }
+
+            return stats;
+        }
 
         #endregion
 
