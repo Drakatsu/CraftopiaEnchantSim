@@ -76,6 +76,18 @@ namespace CES_List
 			return dungeon.EnList;
         }
 
+		public HashSet<Equipment> allEq = new HashSet<Equipment>();
+		public void allEqBuild()
+        {
+			allEq.UnionWith(Head);
+			allEq.UnionWith(Body);
+			allEq.UnionWith(Glider);
+			allEq.UnionWith(Acc);
+			allEq.UnionWith(Ammo);
+			allEq.UnionWith(MainHand);
+			allEq.UnionWith(OffHand);
+        }
+
 		/*******************************************
 						Enchantments
 		********************************************/
@@ -441,5 +453,6 @@ namespace CES_List
 
 		public HashSet<Equipment> OffHand = new HashSet<Equipment> { Torch1h, MonPrism, Bucket, CopShield, IronShield, SlvShield, StlShield, TitShield, GoldShield, PlatShield };
 	#endregion
+		
 	}
 }

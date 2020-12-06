@@ -15,3 +15,4 @@ C:\Users\God\Source\Repos\Drakatsu\CraftopiaEnchantSim\CES\obj\Debug\CES.pdb
 C:\Users\God\Source\Repos\Drakatsu\CraftopiaEnchantSim\CES\bin\Debug\CES.exe
 C:\Users\God\Source\Repos\Drakatsu\CraftopiaEnchantSim\CES\bin\Debug\CES.pdb
 C:\Users\God\Source\Repos\Drakatsu\CraftopiaEnchantSim\CES\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Drago\source\repos\CES\CES\obj\Debug\WindowsFormsApp1.Form1.resources
