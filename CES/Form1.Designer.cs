@@ -27,7 +27,6 @@ namespace WindowsFormsApp1
 
         private void InitializeComponent()
         {
-            #region stuff
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Head = new System.Windows.Forms.TabPage();
             this.EnchantStatHead4 = new System.Windows.Forms.Label();
@@ -117,7 +116,6 @@ namespace WindowsFormsApp1
             this.OffEnchant3 = new System.Windows.Forms.ComboBox();
             this.OffEnchant4 = new System.Windows.Forms.ComboBox();
             this.OffEquip = new System.Windows.Forms.ComboBox();
-            this.CalculateButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Head.SuspendLayout();
             this.Body.SuspendLayout();
@@ -144,8 +142,6 @@ namespace WindowsFormsApp1
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(686, 431);
             this.tabControl1.TabIndex = 0;
-            #endregion
-            #region Head
             // 
             // Head
             // 
@@ -172,7 +168,7 @@ namespace WindowsFormsApp1
             this.EnchantStatHead4.AutoSize = true;
             this.EnchantStatHead4.Location = new System.Drawing.Point(234, 191);
             this.EnchantStatHead4.Name = "EnchantStatHead4";
-            this.EnchantStatHead4.Size = new System.Drawing.Size(35, 13);
+            this.EnchantStatHead4.Size = new System.Drawing.Size(76, 13);
             this.EnchantStatHead4.TabIndex = 9;
             this.EnchantStatHead4.Text = "--No Enchant--";
             // 
@@ -181,7 +177,7 @@ namespace WindowsFormsApp1
             this.EnchantStatHead3.AutoSize = true;
             this.EnchantStatHead3.Location = new System.Drawing.Point(234, 155);
             this.EnchantStatHead3.Name = "EnchantStatHead3";
-            this.EnchantStatHead3.Size = new System.Drawing.Size(35, 13);
+            this.EnchantStatHead3.Size = new System.Drawing.Size(76, 13);
             this.EnchantStatHead3.TabIndex = 8;
             this.EnchantStatHead3.Text = "--No Enchant--";
             // 
@@ -190,7 +186,7 @@ namespace WindowsFormsApp1
             this.EnchantStatHead2.AutoSize = true;
             this.EnchantStatHead2.Location = new System.Drawing.Point(234, 119);
             this.EnchantStatHead2.Name = "EnchantStatHead2";
-            this.EnchantStatHead2.Size = new System.Drawing.Size(35, 13);
+            this.EnchantStatHead2.Size = new System.Drawing.Size(76, 13);
             this.EnchantStatHead2.TabIndex = 7;
             this.EnchantStatHead2.Text = "--No Enchant--";
             // 
@@ -199,7 +195,7 @@ namespace WindowsFormsApp1
             this.EnchantStatHead1.AutoSize = true;
             this.EnchantStatHead1.Location = new System.Drawing.Point(234, 82);
             this.EnchantStatHead1.Name = "EnchantStatHead1";
-            this.EnchantStatHead1.Size = new System.Drawing.Size(35, 13);
+            this.EnchantStatHead1.Size = new System.Drawing.Size(76, 13);
             this.EnchantStatHead1.TabIndex = 6;
             this.EnchantStatHead1.Text = "--No Enchant--";
             // 
@@ -208,9 +204,8 @@ namespace WindowsFormsApp1
             this.EquipStatHead.AutoSize = true;
             this.EquipStatHead.Location = new System.Drawing.Point(234, 38);
             this.EquipStatHead.Name = "EquipStatHead";
-            this.EquipStatHead.Size = new System.Drawing.Size(90, 13);
+            this.EquipStatHead.Size = new System.Drawing.Size(0, 13);
             this.EquipStatHead.TabIndex = 5;
-            this.EquipStatHead.Text = "";
             // 
             // EnchantHead4
             // 
@@ -219,6 +214,7 @@ namespace WindowsFormsApp1
             this.EnchantHead4.Name = "EnchantHead4";
             this.EnchantHead4.Size = new System.Drawing.Size(121, 21);
             this.EnchantHead4.TabIndex = 4;
+            this.EnchantHead4.SelectedIndexChanged += new System.EventHandler(this.EnchantHead4_SelectedIndexChanged);
             // 
             // EnchantHead3
             // 
@@ -227,6 +223,7 @@ namespace WindowsFormsApp1
             this.EnchantHead3.Name = "EnchantHead3";
             this.EnchantHead3.Size = new System.Drawing.Size(121, 21);
             this.EnchantHead3.TabIndex = 3;
+            this.EnchantHead3.SelectedIndexChanged += new System.EventHandler(this.EnchantHead3_SelectedIndexChanged);
             // 
             // EnchantHead2
             // 
@@ -235,6 +232,7 @@ namespace WindowsFormsApp1
             this.EnchantHead2.Name = "EnchantHead2";
             this.EnchantHead2.Size = new System.Drawing.Size(121, 21);
             this.EnchantHead2.TabIndex = 2;
+            this.EnchantHead2.SelectedIndexChanged += new System.EventHandler(this.EnchantHead2_SelectedIndexChanged);
             // 
             // EnchantHead1
             // 
@@ -253,8 +251,6 @@ namespace WindowsFormsApp1
             this.HeadEquip.Size = new System.Drawing.Size(161, 21);
             this.HeadEquip.TabIndex = 0;
             this.HeadEquip.SelectedIndexChanged += new System.EventHandler(this.HeadEquip_SelectedIndexChanged);
-            #endregion
-            #region Body
             // 
             // Body
             // 
@@ -283,7 +279,7 @@ namespace WindowsFormsApp1
             this.EquipStatBody.Name = "EquipStatBody";
             this.EquipStatBody.Size = new System.Drawing.Size(90, 13);
             this.EquipStatBody.TabIndex = 10;
-            this.EquipStatBody.Text = "The Second Test";
+            this.EquipStatBody.Text = " ";
             // 
             // EnchantStatBody1
             // 
@@ -292,7 +288,7 @@ namespace WindowsFormsApp1
             this.EnchantStatBody1.Name = "EnchantStatBody1";
             this.EnchantStatBody1.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatBody1.TabIndex = 9;
-            this.EnchantStatBody1.Text = "The Second Test";
+            this.EnchantStatBody1.Text = " ";
             // 
             // EnchantStatBody2
             // 
@@ -301,7 +297,7 @@ namespace WindowsFormsApp1
             this.EnchantStatBody2.Name = "EnchantStatBody2";
             this.EnchantStatBody2.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatBody2.TabIndex = 8;
-            this.EnchantStatBody2.Text = "The Second Test";
+            this.EnchantStatBody2.Text = " ";
             // 
             // EnchantStatBody3
             // 
@@ -310,7 +306,7 @@ namespace WindowsFormsApp1
             this.EnchantStatBody3.Name = "EnchantStatBody3";
             this.EnchantStatBody3.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatBody3.TabIndex = 7;
-            this.EnchantStatBody3.Text = "The Second Test";
+            this.EnchantStatBody3.Text = " ";
             // 
             // EnchantStatBody4
             // 
@@ -319,7 +315,7 @@ namespace WindowsFormsApp1
             this.EnchantStatBody4.Name = "EnchantStatBody4";
             this.EnchantStatBody4.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatBody4.TabIndex = 6;
-            this.EnchantStatBody4.Text = "The Second Test";
+            this.EnchantStatBody4.Text = " ";
             // 
             // BodyEnchant4
             // 
@@ -328,6 +324,7 @@ namespace WindowsFormsApp1
             this.BodyEnchant4.Name = "BodyEnchant4";
             this.BodyEnchant4.Size = new System.Drawing.Size(121, 21);
             this.BodyEnchant4.TabIndex = 5;
+            this.BodyEnchant4.SelectedIndexChanged += new System.EventHandler(this.BodyEnchant4_SelectedIndexChanged);
             // 
             // BodyEnchant3
             // 
@@ -336,6 +333,7 @@ namespace WindowsFormsApp1
             this.BodyEnchant3.Name = "BodyEnchant3";
             this.BodyEnchant3.Size = new System.Drawing.Size(121, 21);
             this.BodyEnchant3.TabIndex = 4;
+            this.BodyEnchant3.SelectedIndexChanged += new System.EventHandler(this.BodyEnchant3_SelectedIndexChanged);
             // 
             // BodyEnchant2
             // 
@@ -344,6 +342,7 @@ namespace WindowsFormsApp1
             this.BodyEnchant2.Name = "BodyEnchant2";
             this.BodyEnchant2.Size = new System.Drawing.Size(121, 21);
             this.BodyEnchant2.TabIndex = 3;
+            this.BodyEnchant2.SelectedIndexChanged += new System.EventHandler(this.BodyEnchant2_SelectedIndexChanged);
             // 
             // BodyEnchant1
             // 
@@ -352,6 +351,7 @@ namespace WindowsFormsApp1
             this.BodyEnchant1.Name = "BodyEnchant1";
             this.BodyEnchant1.Size = new System.Drawing.Size(121, 21);
             this.BodyEnchant1.TabIndex = 2;
+            this.BodyEnchant1.SelectedIndexChanged += new System.EventHandler(this.BodyEnchant1_SelectedIndexChanged);
             // 
             // BodyEquip
             // 
@@ -361,8 +361,6 @@ namespace WindowsFormsApp1
             this.BodyEquip.Size = new System.Drawing.Size(161, 21);
             this.BodyEquip.TabIndex = 1;
             this.BodyEquip.SelectedIndexChanged += new System.EventHandler(this.BodyEquip_SelectedIndexChanged);
-            #endregion
-            #region Glider
             // 
             // Glider
             // 
@@ -390,7 +388,7 @@ namespace WindowsFormsApp1
             this.EquipStatGlider.Name = "EquipStatGlider";
             this.EquipStatGlider.Size = new System.Drawing.Size(90, 13);
             this.EquipStatGlider.TabIndex = 10;
-            this.EquipStatGlider.Text = "The Second Test";
+            this.EquipStatGlider.Text = " ";
             // 
             // EnchantStatGlider1
             // 
@@ -399,7 +397,7 @@ namespace WindowsFormsApp1
             this.EnchantStatGlider1.Name = "EnchantStatGlider1";
             this.EnchantStatGlider1.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatGlider1.TabIndex = 9;
-            this.EnchantStatGlider1.Text = "The Second Test";
+            this.EnchantStatGlider1.Text = " ";
             // 
             // EnchantStatGlider2
             // 
@@ -408,7 +406,7 @@ namespace WindowsFormsApp1
             this.EnchantStatGlider2.Name = "EnchantStatGlider2";
             this.EnchantStatGlider2.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatGlider2.TabIndex = 8;
-            this.EnchantStatGlider2.Text = "The Second Test";
+            this.EnchantStatGlider2.Text = " ";
             // 
             // EnchantStatGlider3
             // 
@@ -417,7 +415,7 @@ namespace WindowsFormsApp1
             this.EnchantStatGlider3.Name = "EnchantStatGlider3";
             this.EnchantStatGlider3.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatGlider3.TabIndex = 7;
-            this.EnchantStatGlider3.Text = "The Second Test";
+            this.EnchantStatGlider3.Text = " ";
             // 
             // EnchantStatGlider4
             // 
@@ -426,7 +424,7 @@ namespace WindowsFormsApp1
             this.EnchantStatGlider4.Name = "EnchantStatGlider4";
             this.EnchantStatGlider4.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatGlider4.TabIndex = 6;
-            this.EnchantStatGlider4.Text = "The Second Test";
+            this.EnchantStatGlider4.Text = " ";
             // 
             // GliderEnchant3
             // 
@@ -435,6 +433,7 @@ namespace WindowsFormsApp1
             this.GliderEnchant3.Name = "GliderEnchant3";
             this.GliderEnchant3.Size = new System.Drawing.Size(121, 21);
             this.GliderEnchant3.TabIndex = 5;
+            this.GliderEnchant3.SelectedIndexChanged += new System.EventHandler(this.GliderEnchant3_SelectedIndexChanged);
             // 
             // GliderEnchant4
             // 
@@ -443,6 +442,7 @@ namespace WindowsFormsApp1
             this.GliderEnchant4.Name = "GliderEnchant4";
             this.GliderEnchant4.Size = new System.Drawing.Size(121, 21);
             this.GliderEnchant4.TabIndex = 4;
+            this.GliderEnchant4.SelectedIndexChanged += new System.EventHandler(this.GliderEnchant4_SelectedIndexChanged);
             // 
             // GliderEnchant1
             // 
@@ -451,6 +451,7 @@ namespace WindowsFormsApp1
             this.GliderEnchant1.Name = "GliderEnchant1";
             this.GliderEnchant1.Size = new System.Drawing.Size(121, 21);
             this.GliderEnchant1.TabIndex = 3;
+            this.GliderEnchant1.SelectedIndexChanged += new System.EventHandler(this.GliderEnchant1_SelectedIndexChanged);
             // 
             // GliderEnchant2
             // 
@@ -459,6 +460,7 @@ namespace WindowsFormsApp1
             this.GliderEnchant2.Name = "GliderEnchant2";
             this.GliderEnchant2.Size = new System.Drawing.Size(121, 21);
             this.GliderEnchant2.TabIndex = 2;
+            this.GliderEnchant2.SelectedIndexChanged += new System.EventHandler(this.GliderEnchant2_SelectedIndexChanged);
             // 
             // GliderEquip
             // 
@@ -468,9 +470,6 @@ namespace WindowsFormsApp1
             this.GliderEquip.Size = new System.Drawing.Size(161, 21);
             this.GliderEquip.TabIndex = 1;
             this.GliderEquip.SelectedIndexChanged += new System.EventHandler(this.GliderEquip_SelectedIndexChanged);
-
-            #endregion
-            #region Accessory 1
             // 
             // Acc1
             // 
@@ -498,7 +497,7 @@ namespace WindowsFormsApp1
             this.EquipStatAcc1.Name = "EquipStatAcc1";
             this.EquipStatAcc1.Size = new System.Drawing.Size(90, 13);
             this.EquipStatAcc1.TabIndex = 11;
-            this.EquipStatAcc1.Text = "The Second Test";
+            this.EquipStatAcc1.Text = " ";
             // 
             // EnchantStatAccI1
             // 
@@ -507,7 +506,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAccI1.Name = "EnchantStatAccI1";
             this.EnchantStatAccI1.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatAccI1.TabIndex = 10;
-            this.EnchantStatAccI1.Text = "The Second Test";
+            this.EnchantStatAccI1.Text = " ";
             // 
             // EnchantStatAccI2
             // 
@@ -516,7 +515,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAccI2.Name = "EnchantStatAccI2";
             this.EnchantStatAccI2.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatAccI2.TabIndex = 9;
-            this.EnchantStatAccI2.Text = "The Second Test";
+            this.EnchantStatAccI2.Text = " ";
             // 
             // EnchantStatAccI3
             // 
@@ -525,7 +524,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAccI3.Name = "EnchantStatAccI3";
             this.EnchantStatAccI3.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatAccI3.TabIndex = 8;
-            this.EnchantStatAccI3.Text = "The Second Test";
+            this.EnchantStatAccI3.Text = " ";
             // 
             // EnchantStatAccI4
             // 
@@ -534,7 +533,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAccI4.Name = "EnchantStatAccI4";
             this.EnchantStatAccI4.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatAccI4.TabIndex = 7;
-            this.EnchantStatAccI4.Text = "The Second Test";
+            this.EnchantStatAccI4.Text = " ";
             // 
             // Acc1Enchant1
             // 
@@ -543,6 +542,7 @@ namespace WindowsFormsApp1
             this.Acc1Enchant1.Name = "Acc1Enchant1";
             this.Acc1Enchant1.Size = new System.Drawing.Size(121, 21);
             this.Acc1Enchant1.TabIndex = 6;
+            this.Acc1Enchant1.SelectedIndexChanged += new System.EventHandler(this.Acc1Enchant1_SelectedIndexChanged);
             // 
             // Acc1Enchant2
             // 
@@ -551,6 +551,7 @@ namespace WindowsFormsApp1
             this.Acc1Enchant2.Name = "Acc1Enchant2";
             this.Acc1Enchant2.Size = new System.Drawing.Size(121, 21);
             this.Acc1Enchant2.TabIndex = 5;
+            this.Acc1Enchant2.SelectedIndexChanged += new System.EventHandler(this.Acc1Enchant2_SelectedIndexChanged);
             // 
             // Acc1Enchant3
             // 
@@ -559,6 +560,7 @@ namespace WindowsFormsApp1
             this.Acc1Enchant3.Name = "Acc1Enchant3";
             this.Acc1Enchant3.Size = new System.Drawing.Size(121, 21);
             this.Acc1Enchant3.TabIndex = 4;
+            this.Acc1Enchant3.SelectedIndexChanged += new System.EventHandler(this.Acc1Enchant3_SelectedIndexChanged);
             // 
             // Acc1Enchant4
             // 
@@ -567,6 +569,7 @@ namespace WindowsFormsApp1
             this.Acc1Enchant4.Name = "Acc1Enchant4";
             this.Acc1Enchant4.Size = new System.Drawing.Size(121, 21);
             this.Acc1Enchant4.TabIndex = 3;
+            this.Acc1Enchant4.SelectedIndexChanged += new System.EventHandler(this.Acc1Enchant4_SelectedIndexChanged);
             // 
             // Acc1Equip
             // 
@@ -576,9 +579,6 @@ namespace WindowsFormsApp1
             this.Acc1Equip.Size = new System.Drawing.Size(161, 21);
             this.Acc1Equip.TabIndex = 2;
             this.Acc1Equip.SelectedIndexChanged += new System.EventHandler(this.Acc1Equip_SelectedIndexChanged);
-
-            #endregion
-            #region Accessory 2
             // 
             // Acc2
             // 
@@ -606,7 +606,7 @@ namespace WindowsFormsApp1
             this.EquipStatAcc2.Name = "EquipStatAcc2";
             this.EquipStatAcc2.Size = new System.Drawing.Size(90, 13);
             this.EquipStatAcc2.TabIndex = 11;
-            this.EquipStatAcc2.Text = "The Second Test";
+            this.EquipStatAcc2.Text = " ";
             // 
             // EnchantStatAccII1
             // 
@@ -615,7 +615,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAccII1.Name = "EnchantStatAccII1";
             this.EnchantStatAccII1.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatAccII1.TabIndex = 10;
-            this.EnchantStatAccII1.Text = "The Second Test";
+            this.EnchantStatAccII1.Text = " ";
             // 
             // EnchantStatAccII2
             // 
@@ -624,7 +624,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAccII2.Name = "EnchantStatAccII2";
             this.EnchantStatAccII2.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatAccII2.TabIndex = 9;
-            this.EnchantStatAccII2.Text = "The Second Test";
+            this.EnchantStatAccII2.Text = " ";
             // 
             // EnchantStatAccII3
             // 
@@ -633,7 +633,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAccII3.Name = "EnchantStatAccII3";
             this.EnchantStatAccII3.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatAccII3.TabIndex = 8;
-            this.EnchantStatAccII3.Text = "The Second Test";
+            this.EnchantStatAccII3.Text = " ";
             // 
             // EnchantStatAccII4
             // 
@@ -642,7 +642,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAccII4.Name = "EnchantStatAccII4";
             this.EnchantStatAccII4.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatAccII4.TabIndex = 7;
-            this.EnchantStatAccII4.Text = "The Second Test";
+            this.EnchantStatAccII4.Text = " ";
             // 
             // Acc2Enchant1
             // 
@@ -651,6 +651,7 @@ namespace WindowsFormsApp1
             this.Acc2Enchant1.Name = "Acc2Enchant1";
             this.Acc2Enchant1.Size = new System.Drawing.Size(121, 21);
             this.Acc2Enchant1.TabIndex = 6;
+            this.Acc2Enchant1.SelectedIndexChanged += new System.EventHandler(this.Acc2Enchant1_SelectedIndexChanged);
             // 
             // Acc2Enchant2
             // 
@@ -659,6 +660,7 @@ namespace WindowsFormsApp1
             this.Acc2Enchant2.Name = "Acc2Enchant2";
             this.Acc2Enchant2.Size = new System.Drawing.Size(121, 21);
             this.Acc2Enchant2.TabIndex = 5;
+            this.Acc2Enchant2.SelectedIndexChanged += new System.EventHandler(this.Acc2Enchant2_SelectedIndexChanged);
             // 
             // Acc2Enchant3
             // 
@@ -667,6 +669,7 @@ namespace WindowsFormsApp1
             this.Acc2Enchant3.Name = "Acc2Enchant3";
             this.Acc2Enchant3.Size = new System.Drawing.Size(121, 21);
             this.Acc2Enchant3.TabIndex = 4;
+            this.Acc2Enchant3.SelectedIndexChanged += new System.EventHandler(this.Acc2Enchant3_SelectedIndexChanged);
             // 
             // Acc2Enchant4
             // 
@@ -675,6 +678,7 @@ namespace WindowsFormsApp1
             this.Acc2Enchant4.Name = "Acc2Enchant4";
             this.Acc2Enchant4.Size = new System.Drawing.Size(121, 21);
             this.Acc2Enchant4.TabIndex = 3;
+            this.Acc2Enchant4.SelectedIndexChanged += new System.EventHandler(this.Acc2Enchant4_SelectedIndexChanged);
             // 
             // Acc2Equip
             // 
@@ -684,9 +688,6 @@ namespace WindowsFormsApp1
             this.Acc2Equip.Size = new System.Drawing.Size(161, 21);
             this.Acc2Equip.TabIndex = 2;
             this.Acc2Equip.SelectedIndexChanged += new System.EventHandler(this.Acc2Equip_SelectedIndexChanged);
-
-            #endregion
-            #region Ammo
             // 
             // Ammo
             // 
@@ -714,7 +715,7 @@ namespace WindowsFormsApp1
             this.EquipStatAmmo.Name = "EquipStatAmmo";
             this.EquipStatAmmo.Size = new System.Drawing.Size(90, 13);
             this.EquipStatAmmo.TabIndex = 11;
-            this.EquipStatAmmo.Text = "The Second Test";
+            this.EquipStatAmmo.Text = " ";
             // 
             // EnchantStatAmmo1
             // 
@@ -723,7 +724,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAmmo1.Name = "EnchantStatAmmo1";
             this.EnchantStatAmmo1.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatAmmo1.TabIndex = 10;
-            this.EnchantStatAmmo1.Text = "The Second Test";
+            this.EnchantStatAmmo1.Text = " ";
             // 
             // EnchantStatAmmo2
             // 
@@ -732,7 +733,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAmmo2.Name = "EnchantStatAmmo2";
             this.EnchantStatAmmo2.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatAmmo2.TabIndex = 9;
-            this.EnchantStatAmmo2.Text = "The Second Test";
+            this.EnchantStatAmmo2.Text = "";
             // 
             // EnchantStatAmmo3
             // 
@@ -741,7 +742,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAmmo3.Name = "EnchantStatAmmo3";
             this.EnchantStatAmmo3.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatAmmo3.TabIndex = 8;
-            this.EnchantStatAmmo3.Text = "The Second Test";
+            this.EnchantStatAmmo3.Text = "";
             // 
             // EnchantStatAmmo4
             // 
@@ -750,7 +751,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAmmo4.Name = "EnchantStatAmmo4";
             this.EnchantStatAmmo4.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatAmmo4.TabIndex = 7;
-            this.EnchantStatAmmo4.Text = "The Second Test";
+            this.EnchantStatAmmo4.Text = " ";
             // 
             // AmmoEnchant1
             // 
@@ -759,6 +760,7 @@ namespace WindowsFormsApp1
             this.AmmoEnchant1.Name = "AmmoEnchant1";
             this.AmmoEnchant1.Size = new System.Drawing.Size(121, 21);
             this.AmmoEnchant1.TabIndex = 6;
+            this.AmmoEnchant1.SelectedIndexChanged += new System.EventHandler(this.AmmoEnchant1_SelectedIndexChanged);
             // 
             // AmmoEnchant2
             // 
@@ -767,6 +769,7 @@ namespace WindowsFormsApp1
             this.AmmoEnchant2.Name = "AmmoEnchant2";
             this.AmmoEnchant2.Size = new System.Drawing.Size(121, 21);
             this.AmmoEnchant2.TabIndex = 5;
+            this.AmmoEnchant2.SelectedIndexChanged += new System.EventHandler(this.AmmoEnchant2_SelectedIndexChanged);
             // 
             // AmmoEnchant3
             // 
@@ -775,6 +778,7 @@ namespace WindowsFormsApp1
             this.AmmoEnchant3.Name = "AmmoEnchant3";
             this.AmmoEnchant3.Size = new System.Drawing.Size(121, 21);
             this.AmmoEnchant3.TabIndex = 4;
+            this.AmmoEnchant3.SelectedIndexChanged += new System.EventHandler(this.AmmoEnchant3_SelectedIndexChanged);
             // 
             // AmmoEnchant4
             // 
@@ -783,6 +787,7 @@ namespace WindowsFormsApp1
             this.AmmoEnchant4.Name = "AmmoEnchant4";
             this.AmmoEnchant4.Size = new System.Drawing.Size(121, 21);
             this.AmmoEnchant4.TabIndex = 3;
+            this.AmmoEnchant4.SelectedIndexChanged += new System.EventHandler(this.AmmoEnchant4_SelectedIndexChanged);
             // 
             // AmmoEquip
             // 
@@ -792,9 +797,6 @@ namespace WindowsFormsApp1
             this.AmmoEquip.Size = new System.Drawing.Size(161, 21);
             this.AmmoEquip.TabIndex = 2;
             this.AmmoEquip.SelectedIndexChanged += new System.EventHandler(this.AmmoEquip_SelectedIndexChanged);
-
-            #endregion
-            #region Main Hand
             // 
             // MainHand
             // 
@@ -822,7 +824,7 @@ namespace WindowsFormsApp1
             this.EquipStatMain.Name = "EquipStatMain";
             this.EquipStatMain.Size = new System.Drawing.Size(90, 13);
             this.EquipStatMain.TabIndex = 11;
-            this.EquipStatMain.Text = "The Second Test";
+            this.EquipStatMain.Text = " ";
             // 
             // EnchantStatMain1
             // 
@@ -831,7 +833,7 @@ namespace WindowsFormsApp1
             this.EnchantStatMain1.Name = "EnchantStatMain1";
             this.EnchantStatMain1.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatMain1.TabIndex = 10;
-            this.EnchantStatMain1.Text = "The Second Test";
+            this.EnchantStatMain1.Text = " ";
             // 
             // EnchantStatMain2
             // 
@@ -840,7 +842,7 @@ namespace WindowsFormsApp1
             this.EnchantStatMain2.Name = "EnchantStatMain2";
             this.EnchantStatMain2.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatMain2.TabIndex = 9;
-            this.EnchantStatMain2.Text = "The Second Test";
+            this.EnchantStatMain2.Text = " ";
             // 
             // EnchantStatMain3
             // 
@@ -849,7 +851,7 @@ namespace WindowsFormsApp1
             this.EnchantStatMain3.Name = "EnchantStatMain3";
             this.EnchantStatMain3.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatMain3.TabIndex = 8;
-            this.EnchantStatMain3.Text = "The Second Test";
+            this.EnchantStatMain3.Text = " ";
             // 
             // EnchantStatMain4
             // 
@@ -858,7 +860,7 @@ namespace WindowsFormsApp1
             this.EnchantStatMain4.Name = "EnchantStatMain4";
             this.EnchantStatMain4.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatMain4.TabIndex = 7;
-            this.EnchantStatMain4.Text = "The Second Test";
+            this.EnchantStatMain4.Text = " ";
             // 
             // MainEnchant1
             // 
@@ -867,6 +869,7 @@ namespace WindowsFormsApp1
             this.MainEnchant1.Name = "MainEnchant1";
             this.MainEnchant1.Size = new System.Drawing.Size(121, 21);
             this.MainEnchant1.TabIndex = 6;
+            this.MainEnchant1.SelectedIndexChanged += new System.EventHandler(this.MainEnchant1_SelectedIndexChanged);
             // 
             // MainEnchant2
             // 
@@ -875,6 +878,7 @@ namespace WindowsFormsApp1
             this.MainEnchant2.Name = "MainEnchant2";
             this.MainEnchant2.Size = new System.Drawing.Size(121, 21);
             this.MainEnchant2.TabIndex = 5;
+            this.MainEnchant2.SelectedIndexChanged += new System.EventHandler(this.MainEnchant2_SelectedIndexChanged);
             // 
             // MainEnchant3
             // 
@@ -883,6 +887,7 @@ namespace WindowsFormsApp1
             this.MainEnchant3.Name = "MainEnchant3";
             this.MainEnchant3.Size = new System.Drawing.Size(121, 21);
             this.MainEnchant3.TabIndex = 4;
+            this.MainEnchant3.SelectedIndexChanged += new System.EventHandler(this.MainEnchant3_SelectedIndexChanged);
             // 
             // MainEnchant4
             // 
@@ -891,6 +896,7 @@ namespace WindowsFormsApp1
             this.MainEnchant4.Name = "MainEnchant4";
             this.MainEnchant4.Size = new System.Drawing.Size(121, 21);
             this.MainEnchant4.TabIndex = 3;
+            this.MainEnchant4.SelectedIndexChanged += new System.EventHandler(this.MainEnchant4_SelectedIndexChanged);
             // 
             // MainEquip
             // 
@@ -899,8 +905,7 @@ namespace WindowsFormsApp1
             this.MainEquip.Name = "MainEquip";
             this.MainEquip.Size = new System.Drawing.Size(161, 21);
             this.MainEquip.TabIndex = 2;
-            #endregion
-            #region Off Hand
+            this.MainEquip.SelectedIndexChanged += new System.EventHandler(this.MainEquip_SelectedIndexChanged);
             // 
             // OffHand
             // 
@@ -928,7 +933,7 @@ namespace WindowsFormsApp1
             this.EquipStatOff.Name = "EquipStatOff";
             this.EquipStatOff.Size = new System.Drawing.Size(90, 13);
             this.EquipStatOff.TabIndex = 11;
-            this.EquipStatOff.Text = "The Second Test";
+            this.EquipStatOff.Text = " ";
             // 
             // EnchantStatOff1
             // 
@@ -937,7 +942,7 @@ namespace WindowsFormsApp1
             this.EnchantStatOff1.Name = "EnchantStatOff1";
             this.EnchantStatOff1.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatOff1.TabIndex = 10;
-            this.EnchantStatOff1.Text = "The Second Test";
+            this.EnchantStatOff1.Text = " ";
             // 
             // EnchantStatOff2
             // 
@@ -946,7 +951,7 @@ namespace WindowsFormsApp1
             this.EnchantStatOff2.Name = "EnchantStatOff2";
             this.EnchantStatOff2.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatOff2.TabIndex = 9;
-            this.EnchantStatOff2.Text = "The Second Test";
+            this.EnchantStatOff2.Text = " ";
             // 
             // EnchantStatOff3
             // 
@@ -955,7 +960,7 @@ namespace WindowsFormsApp1
             this.EnchantStatOff3.Name = "EnchantStatOff3";
             this.EnchantStatOff3.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatOff3.TabIndex = 8;
-            this.EnchantStatOff3.Text = "The Second Test";
+            this.EnchantStatOff3.Text = " ";
             // 
             // EnchantStatOff4
             // 
@@ -964,7 +969,7 @@ namespace WindowsFormsApp1
             this.EnchantStatOff4.Name = "EnchantStatOff4";
             this.EnchantStatOff4.Size = new System.Drawing.Size(90, 13);
             this.EnchantStatOff4.TabIndex = 7;
-            this.EnchantStatOff4.Text = "The Second Test";
+            this.EnchantStatOff4.Text = " ";
             // 
             // OffEnchant1
             // 
@@ -973,6 +978,7 @@ namespace WindowsFormsApp1
             this.OffEnchant1.Name = "OffEnchant1";
             this.OffEnchant1.Size = new System.Drawing.Size(121, 21);
             this.OffEnchant1.TabIndex = 6;
+            this.OffEnchant1.SelectedIndexChanged += new System.EventHandler(this.OffEnchant1_SelectedIndexChanged);
             // 
             // OffEnchant2
             // 
@@ -981,6 +987,7 @@ namespace WindowsFormsApp1
             this.OffEnchant2.Name = "OffEnchant2";
             this.OffEnchant2.Size = new System.Drawing.Size(121, 21);
             this.OffEnchant2.TabIndex = 5;
+            this.OffEnchant2.SelectedIndexChanged += new System.EventHandler(this.OffEnchant2_SelectedIndexChanged);
             // 
             // OffEnchant3
             // 
@@ -989,6 +996,7 @@ namespace WindowsFormsApp1
             this.OffEnchant3.Name = "OffEnchant3";
             this.OffEnchant3.Size = new System.Drawing.Size(121, 21);
             this.OffEnchant3.TabIndex = 4;
+            this.OffEnchant3.SelectedIndexChanged += new System.EventHandler(this.OffEnchant4_SelectedIndexChanged);
             // 
             // OffEnchant4
             // 
@@ -997,6 +1005,7 @@ namespace WindowsFormsApp1
             this.OffEnchant4.Name = "OffEnchant4";
             this.OffEnchant4.Size = new System.Drawing.Size(121, 21);
             this.OffEnchant4.TabIndex = 3;
+            this.OffEnchant4.SelectedIndexChanged += new System.EventHandler(this.OffEnchant4_SelectedIndexChanged);
             // 
             // OffEquip
             // 
@@ -1005,24 +1014,13 @@ namespace WindowsFormsApp1
             this.OffEquip.Name = "OffEquip";
             this.OffEquip.Size = new System.Drawing.Size(161, 21);
             this.OffEquip.TabIndex = 2;
-            #endregion
-            #region System
-            // 
-            // CalculateButton
-            // 
-            this.CalculateButton.Location = new System.Drawing.Point(699, 404);
-            this.CalculateButton.Name = "CalculateButton";
-            this.CalculateButton.Size = new System.Drawing.Size(75, 23);
-            this.CalculateButton.TabIndex = 10;
-            this.CalculateButton.Text = "Calculate";
-            this.CalculateButton.UseVisualStyleBackColor = true;
+            this.OffEquip.SelectedIndexChanged += new System.EventHandler(this.OffEquip_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1181, 450);
-            this.Controls.Add(this.CalculateButton);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -1044,12 +1042,7 @@ namespace WindowsFormsApp1
             this.OffHand.ResumeLayout(false);
             this.OffHand.PerformLayout();
             this.ResumeLayout(false);
-            #endregion
 
-            //Nested foreach to populate 
-            //foreach (Equipment eq in EqLib.Head) HeadEquip.Items.Add(eq.name);
-
-           
         }
 
         #endregion
@@ -1378,9 +1371,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label EnchantStatOff2;
         private System.Windows.Forms.Label EnchantStatOff3;
         private System.Windows.Forms.Label EnchantStatOff4;
-        private System.Windows.Forms.Button CalculateButton;
         #endregion
-
     }
 }
 

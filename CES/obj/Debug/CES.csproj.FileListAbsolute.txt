@@ -6,3 +6,12 @@ C:\Users\Drago\source\repos\CES\CES\obj\Debug\CES.csproj.GenerateResource.cache
 C:\Users\Drago\source\repos\CES\CES\obj\Debug\CES.csproj.CoreCompileInputs.cache
 C:\Users\Drago\source\repos\CES\CES\obj\Debug\CES.exe
 C:\Users\Drago\source\repos\CES\CES\obj\Debug\CES.pdb
+C:\Users\God\Source\Repos\Drakatsu\CraftopiaEnchantSim\CES\obj\Debug\CES.csprojAssemblyReference.cache
+C:\Users\God\Source\Repos\Drakatsu\CraftopiaEnchantSim\CES\obj\Debug\CES.Properties.Resources.resources
+C:\Users\God\Source\Repos\Drakatsu\CraftopiaEnchantSim\CES\obj\Debug\CES.csproj.GenerateResource.cache
+C:\Users\God\Source\Repos\Drakatsu\CraftopiaEnchantSim\CES\obj\Debug\CES.csproj.CoreCompileInputs.cache
+C:\Users\God\Source\Repos\Drakatsu\CraftopiaEnchantSim\CES\obj\Debug\CES.exe
+C:\Users\God\Source\Repos\Drakatsu\CraftopiaEnchantSim\CES\obj\Debug\CES.pdb
+C:\Users\God\Source\Repos\Drakatsu\CraftopiaEnchantSim\CES\bin\Debug\CES.exe
+C:\Users\God\Source\Repos\Drakatsu\CraftopiaEnchantSim\CES\bin\Debug\CES.pdb
+C:\Users\God\Source\Repos\Drakatsu\CraftopiaEnchantSim\CES\obj\Debug\WindowsFormsApp1.Form1.resources
