@@ -5,6 +5,7 @@ using System.Text;
 
 namespace CES_List
 {
+
 	public class Enchant
 	{
 		public int atk_Static, atk_Percent, def_Static, def_Percent, matk_Static, matk_Percent,
@@ -455,4 +456,5 @@ namespace CES_List
 	#endregion
 		
 	}
+
 }

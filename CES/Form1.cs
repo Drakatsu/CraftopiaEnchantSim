@@ -234,6 +234,10 @@ namespace WindowsFormsApp1
 
             //populate enchant combo boxes
             populateCombo((string)HeadEquip.SelectedItem, EqLib.Head, new List<ComboBox> { EnchantHead1, EnchantHead2, EnchantHead3, EnchantHead4 });
+
+            //Change Build Readout Summary
+            HeadEquipDisplay.Text = (string)HeadEquip.SelectedItem;
+            //HeadEnchantDisplay.Text = 
         }
 
         private void GliderEquip_SelectedIndexChanged(object sender, EventArgs e)
@@ -298,8 +302,13 @@ namespace WindowsFormsApp1
 
         }
         #endregion
+        #region Display Box Handlers
+        
 
 
+
+
+        #endregion
 
     }
 }
