@@ -39,6 +39,17 @@ namespace WindowsFormsApp1
         private void EnchantHead1_SelectedIndexChanged(object sender, EventArgs e)
         {
             EnchantStatHead1.Text = getEnStats(getEnchant((string)EnchantHead1.SelectedItem, EqLib.getAllEnchants()));
+            
+            /* To populate the Textboxes in the display build portion the template is; 
+            TextBoxName.Clear();
+            TextBoxName.AppendText(Function that returns the appropiate stat);
+            
+            use the below as an example 
+            AtkBaseDyn.Clear();
+            AtkBaseDyn.AppendText(Fuckin algorithm I don't got);            
+            */
+            
+            
         }
         private void EnchantHead2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -192,14 +203,26 @@ namespace WindowsFormsApp1
             //show equipment stats
             EquipStatBody.Text = getEqStats((string)BodyEquip.SelectedItem, EqLib.Body);
 
+            //clear enchant combo box selections
+            BodyEnchant1.SelectedIndex = -1; EnchantStatBody1.Text = "";
+            BodyEnchant2.SelectedIndex = -1; EnchantStatBody2.Text = "";
+            BodyEnchant3.SelectedIndex = -1; EnchantStatBody3.Text = "";
+            BodyEnchant4.SelectedIndex = -1; EnchantStatBody4.Text = "";
+
             //populate enchant combo boxes
-           populateCombo((string)BodyEquip.SelectedItem, EqLib.Body, new List<System.Windows.Forms.ComboBox> { BodyEnchant1, BodyEnchant2, BodyEnchant3, BodyEnchant4 });
+            populateCombo((string)BodyEquip.SelectedItem, EqLib.Body, new List<System.Windows.Forms.ComboBox> { BodyEnchant1, BodyEnchant2, BodyEnchant3, BodyEnchant4 });
         }
 
         private void HeadEquip_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Show equip stats
             EquipStatHead.Text = getEqStats((string)HeadEquip.SelectedItem, EqLib.Head);
+
+            //clear enchant combo box selections
+            EnchantHead1.SelectedIndex = -1; EnchantStatHead1.Text = "";
+            EnchantHead2.SelectedIndex = -1; EnchantStatHead2.Text = "";
+            EnchantHead3.SelectedIndex = -1; EnchantStatHead3.Text = "";
+            EnchantHead4.SelectedIndex = -1; EnchantStatHead4.Text = "";
 
             //populate enchant combo boxes
             populateCombo((string)HeadEquip.SelectedItem, EqLib.Head, new List<ComboBox> { EnchantHead1, EnchantHead2, EnchantHead3, EnchantHead4 });
@@ -209,6 +232,12 @@ namespace WindowsFormsApp1
         {
             //equip stats 
             EquipStatGlider.Text = getEqStats((string)GliderEquip.SelectedItem, EqLib.Glider);
+
+            //clear enchant combo box selections
+            GliderEnchant1.SelectedIndex = -1; EnchantStatGlider1.Text = "";
+            GliderEnchant2.SelectedIndex = -1; EnchantStatGlider2.Text = "";
+            GliderEnchant3.SelectedIndex = -1; EnchantStatGlider3.Text = "";
+            GliderEnchant4.SelectedIndex = -1; EnchantStatGlider4.Text = "";
 
             //populate enchant combos
             populateCombo((string)GliderEquip.SelectedItem, EqLib.Glider, new List<ComboBox> { GliderEnchant1, GliderEnchant2, GliderEnchant3, GliderEnchant4 });
@@ -220,14 +249,26 @@ namespace WindowsFormsApp1
             //Equip Stats
             EquipStatAcc1.Text = getEqStats((string)Acc1Equip.SelectedItem, EqLib.Acc);
 
+            //clear enchant combo box selections
+            Acc1Enchant1.SelectedIndex = -1; EnchantStatAccI1.Text = "";
+            Acc1Enchant2.SelectedIndex = -1; EnchantStatAccI2.Text = "";
+            Acc1Enchant3.SelectedIndex = -1; EnchantStatAccI3.Text = "";
+            Acc1Enchant4.SelectedIndex = -1; EnchantStatAccI4.Text = "";
+
             //populate Acc1 enchant 
             populateCombo((string)Acc1Equip.SelectedItem, EqLib.Acc, new List<ComboBox> { Acc1Enchant1, Acc1Enchant2, Acc1Enchant3, Acc1Enchant4 });
         }
 
         private void Acc2Equip_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Equp STats
+            //Equp Stats
             EquipStatAcc2.Text = getEqStats((string)Acc2Equip.SelectedItem, EqLib.Acc);
+
+            //clear enchant combo box selections
+            Acc2Enchant1.SelectedIndex = -1; EnchantStatAccII1.Text = "";
+            Acc2Enchant2.SelectedIndex = -1; EnchantStatAccII2.Text = "";
+            Acc2Enchant3.SelectedIndex = -1; EnchantStatAccII3.Text = "";
+            Acc2Enchant4.SelectedIndex = -1; EnchantStatAccII4.Text = "";
 
             //populate combo
             populateCombo((string)Acc2Equip.SelectedItem, EqLib.Acc, new List<ComboBox> { Acc2Enchant1, Acc2Enchant2, Acc2Enchant3, Acc2Enchant4 });
@@ -238,6 +279,12 @@ namespace WindowsFormsApp1
         {
             //Equip stats
             EquipStatAmmo.Text = getEqStats((string)AmmoEquip.SelectedItem, EqLib.Ammo);
+
+            //clear enchant combo box selections
+            AmmoEnchant1.SelectedIndex = -1; EnchantStatAmmo1.Text = "";
+            AmmoEnchant2.SelectedIndex = -1; EnchantStatAmmo2.Text = "";
+            AmmoEnchant3.SelectedIndex = -1; EnchantStatAmmo3.Text = "";
+            AmmoEnchant4.SelectedIndex = -1; EnchantStatAmmo4.Text = "";
 
             //populate boxes
             populateCombo((string)AmmoEquip.SelectedItem, EqLib.Ammo, new List<ComboBox> { AmmoEnchant1, AmmoEnchant2, AmmoEnchant3, AmmoEnchant4 });
@@ -250,6 +297,12 @@ namespace WindowsFormsApp1
             //Equip stats
             EquipStatMain.Text = getEqStats((string)MainEquip.SelectedItem, EqLib.MainHand);
 
+            //clear enchant combo box selections
+            MainEnchant1.SelectedIndex = -1; EnchantStatMain1.Text = "";
+            MainEnchant2.SelectedIndex = -1; EnchantStatMain2.Text = "";
+            MainEnchant3.SelectedIndex = -1; EnchantStatMain3.Text = "";
+            MainEnchant4.SelectedIndex = -1; EnchantStatMain4.Text = "";
+
             //populate boxes
             populateCombo((string)MainEquip.SelectedItem, EqLib.MainHand, new List<ComboBox> { MainEnchant1, MainEnchant2, MainEnchant3, MainEnchant4 });
 
@@ -261,14 +314,27 @@ namespace WindowsFormsApp1
             //Equip stats
             EquipStatOff.Text = getEqStats((string)OffEquip.SelectedItem, EqLib.OffHand);
 
+            //clear enchant combo box selections
+            OffEnchant1.SelectedIndex = -1; EnchantStatOff1.Text = "";
+            OffEnchant2.SelectedIndex = -1; EnchantStatOff2.Text = "";
+            OffEnchant3.SelectedIndex = -1; EnchantStatOff3.Text = "";
+            OffEnchant4.SelectedIndex = -1; EnchantStatOff4.Text = "";
+
             //populate boxes
             populateCombo((string)OffEquip.SelectedItem, EqLib.OffHand, new List<ComboBox> { MainEnchant1, MainEnchant2, MainEnchant3, MainEnchant4 });
 
 
         }
+
+
         #endregion
+        #region Display Box Handlers
+        
 
 
+
+
+        #endregion
 
     }
 }
