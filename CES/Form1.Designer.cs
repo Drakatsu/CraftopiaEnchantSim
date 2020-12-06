@@ -3,20 +3,6 @@ using System.Collections.Generic;
 
 namespace WindowsFormsApp1
 {
-    public enum Stat
-    {
-        ATK,
-        MATK,
-        DEF,
-        CritC,
-        CritD,
-        ASpd,
-        MSpd,
-        MP,
-        ST,
-        HP,
-        Sat
-    }
     partial class Form1
     {
         /// <summary>
@@ -176,7 +162,7 @@ namespace WindowsFormsApp1
             this.GliderEnchantDisplay = new System.Windows.Forms.Label();
             this.Acc1EquipDisplay = new System.Windows.Forms.Label();
             this.Acc1EnchantDisplay = new System.Windows.Forms.Label();
-            this.Acc2EqiupDisplay = new System.Windows.Forms.Label();
+            this.Acc2EquipDisplay = new System.Windows.Forms.Label();
             this.Acc2EnchantDisplay = new System.Windows.Forms.Label();
             this.AmmoEquipDisplay = new System.Windows.Forms.Label();
             this.AmmoEnchantDisplay = new System.Windows.Forms.Label();
@@ -196,6 +182,8 @@ namespace WindowsFormsApp1
             this.Ammo.SuspendLayout();
             this.MainHand.SuspendLayout();
             this.OffHand.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -334,7 +322,7 @@ namespace WindowsFormsApp1
             this.Body.Location = new System.Drawing.Point(4, 22);
             this.Body.Name = "Body";
             this.Body.Padding = new System.Windows.Forms.Padding(3);
-            this.Body.Size = new System.Drawing.Size(678, 405);
+            this.Body.Size = new System.Drawing.Size(553, 405);
             this.Body.TabIndex = 1;
             this.Body.Text = "Body";
             this.Body.UseVisualStyleBackColor = true;
@@ -344,7 +332,7 @@ namespace WindowsFormsApp1
             this.EquipStatBody.AutoSize = true;
             this.EquipStatBody.Location = new System.Drawing.Point(234, 38);
             this.EquipStatBody.Name = "EquipStatBody";
-            this.EquipStatBody.Size = new System.Drawing.Size(90, 13);
+            this.EquipStatBody.Size = new System.Drawing.Size(10, 13);
             this.EquipStatBody.TabIndex = 10;
             this.EquipStatBody.Text = " ";
             // 
@@ -353,7 +341,7 @@ namespace WindowsFormsApp1
             this.EnchantStatBody1.AutoSize = true;
             this.EnchantStatBody1.Location = new System.Drawing.Point(234, 82);
             this.EnchantStatBody1.Name = "EnchantStatBody1";
-            this.EnchantStatBody1.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatBody1.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatBody1.TabIndex = 9;
             this.EnchantStatBody1.Text = " ";
             // 
@@ -362,7 +350,7 @@ namespace WindowsFormsApp1
             this.EnchantStatBody2.AutoSize = true;
             this.EnchantStatBody2.Location = new System.Drawing.Point(234, 119);
             this.EnchantStatBody2.Name = "EnchantStatBody2";
-            this.EnchantStatBody2.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatBody2.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatBody2.TabIndex = 8;
             this.EnchantStatBody2.Text = " ";
             // 
@@ -371,7 +359,7 @@ namespace WindowsFormsApp1
             this.EnchantStatBody3.AutoSize = true;
             this.EnchantStatBody3.Location = new System.Drawing.Point(234, 155);
             this.EnchantStatBody3.Name = "EnchantStatBody3";
-            this.EnchantStatBody3.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatBody3.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatBody3.TabIndex = 7;
             this.EnchantStatBody3.Text = " ";
             // 
@@ -380,7 +368,7 @@ namespace WindowsFormsApp1
             this.EnchantStatBody4.AutoSize = true;
             this.EnchantStatBody4.Location = new System.Drawing.Point(234, 191);
             this.EnchantStatBody4.Name = "EnchantStatBody4";
-            this.EnchantStatBody4.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatBody4.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatBody4.TabIndex = 6;
             this.EnchantStatBody4.Text = " ";
             // 
@@ -443,7 +431,7 @@ namespace WindowsFormsApp1
             this.Glider.Controls.Add(this.GliderEquip);
             this.Glider.Location = new System.Drawing.Point(4, 22);
             this.Glider.Name = "Glider";
-            this.Glider.Size = new System.Drawing.Size(678, 405);
+            this.Glider.Size = new System.Drawing.Size(553, 405);
             this.Glider.TabIndex = 2;
             this.Glider.Text = "Glider";
             this.Glider.UseVisualStyleBackColor = true;
@@ -453,7 +441,7 @@ namespace WindowsFormsApp1
             this.EquipStatGlider.AutoSize = true;
             this.EquipStatGlider.Location = new System.Drawing.Point(234, 38);
             this.EquipStatGlider.Name = "EquipStatGlider";
-            this.EquipStatGlider.Size = new System.Drawing.Size(90, 13);
+            this.EquipStatGlider.Size = new System.Drawing.Size(10, 13);
             this.EquipStatGlider.TabIndex = 10;
             this.EquipStatGlider.Text = " ";
             // 
@@ -462,7 +450,7 @@ namespace WindowsFormsApp1
             this.EnchantStatGlider1.AutoSize = true;
             this.EnchantStatGlider1.Location = new System.Drawing.Point(234, 82);
             this.EnchantStatGlider1.Name = "EnchantStatGlider1";
-            this.EnchantStatGlider1.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatGlider1.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatGlider1.TabIndex = 9;
             this.EnchantStatGlider1.Text = " ";
             // 
@@ -471,7 +459,7 @@ namespace WindowsFormsApp1
             this.EnchantStatGlider2.AutoSize = true;
             this.EnchantStatGlider2.Location = new System.Drawing.Point(234, 119);
             this.EnchantStatGlider2.Name = "EnchantStatGlider2";
-            this.EnchantStatGlider2.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatGlider2.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatGlider2.TabIndex = 8;
             this.EnchantStatGlider2.Text = " ";
             // 
@@ -480,7 +468,7 @@ namespace WindowsFormsApp1
             this.EnchantStatGlider3.AutoSize = true;
             this.EnchantStatGlider3.Location = new System.Drawing.Point(234, 155);
             this.EnchantStatGlider3.Name = "EnchantStatGlider3";
-            this.EnchantStatGlider3.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatGlider3.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatGlider3.TabIndex = 7;
             this.EnchantStatGlider3.Text = " ";
             // 
@@ -489,7 +477,7 @@ namespace WindowsFormsApp1
             this.EnchantStatGlider4.AutoSize = true;
             this.EnchantStatGlider4.Location = new System.Drawing.Point(234, 191);
             this.EnchantStatGlider4.Name = "EnchantStatGlider4";
-            this.EnchantStatGlider4.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatGlider4.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatGlider4.TabIndex = 6;
             this.EnchantStatGlider4.Text = " ";
             // 
@@ -552,7 +540,7 @@ namespace WindowsFormsApp1
             this.Acc1.Controls.Add(this.Acc1Equip);
             this.Acc1.Location = new System.Drawing.Point(4, 22);
             this.Acc1.Name = "Acc1";
-            this.Acc1.Size = new System.Drawing.Size(678, 405);
+            this.Acc1.Size = new System.Drawing.Size(553, 405);
             this.Acc1.TabIndex = 3;
             this.Acc1.Text = "Acc 1";
             this.Acc1.UseVisualStyleBackColor = true;
@@ -562,7 +550,7 @@ namespace WindowsFormsApp1
             this.EquipStatAcc1.AutoSize = true;
             this.EquipStatAcc1.Location = new System.Drawing.Point(234, 38);
             this.EquipStatAcc1.Name = "EquipStatAcc1";
-            this.EquipStatAcc1.Size = new System.Drawing.Size(90, 13);
+            this.EquipStatAcc1.Size = new System.Drawing.Size(10, 13);
             this.EquipStatAcc1.TabIndex = 11;
             this.EquipStatAcc1.Text = " ";
             // 
@@ -571,7 +559,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAccI1.AutoSize = true;
             this.EnchantStatAccI1.Location = new System.Drawing.Point(234, 82);
             this.EnchantStatAccI1.Name = "EnchantStatAccI1";
-            this.EnchantStatAccI1.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatAccI1.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatAccI1.TabIndex = 10;
             this.EnchantStatAccI1.Text = " ";
             // 
@@ -580,7 +568,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAccI2.AutoSize = true;
             this.EnchantStatAccI2.Location = new System.Drawing.Point(234, 119);
             this.EnchantStatAccI2.Name = "EnchantStatAccI2";
-            this.EnchantStatAccI2.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatAccI2.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatAccI2.TabIndex = 9;
             this.EnchantStatAccI2.Text = " ";
             // 
@@ -589,7 +577,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAccI3.AutoSize = true;
             this.EnchantStatAccI3.Location = new System.Drawing.Point(234, 155);
             this.EnchantStatAccI3.Name = "EnchantStatAccI3";
-            this.EnchantStatAccI3.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatAccI3.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatAccI3.TabIndex = 8;
             this.EnchantStatAccI3.Text = " ";
             // 
@@ -598,7 +586,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAccI4.AutoSize = true;
             this.EnchantStatAccI4.Location = new System.Drawing.Point(234, 191);
             this.EnchantStatAccI4.Name = "EnchantStatAccI4";
-            this.EnchantStatAccI4.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatAccI4.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatAccI4.TabIndex = 7;
             this.EnchantStatAccI4.Text = " ";
             // 
@@ -661,7 +649,7 @@ namespace WindowsFormsApp1
             this.Acc2.Controls.Add(this.Acc2Equip);
             this.Acc2.Location = new System.Drawing.Point(4, 22);
             this.Acc2.Name = "Acc2";
-            this.Acc2.Size = new System.Drawing.Size(678, 405);
+            this.Acc2.Size = new System.Drawing.Size(553, 405);
             this.Acc2.TabIndex = 4;
             this.Acc2.Text = "Acc 2";
             this.Acc2.UseVisualStyleBackColor = true;
@@ -671,7 +659,7 @@ namespace WindowsFormsApp1
             this.EquipStatAcc2.AutoSize = true;
             this.EquipStatAcc2.Location = new System.Drawing.Point(234, 38);
             this.EquipStatAcc2.Name = "EquipStatAcc2";
-            this.EquipStatAcc2.Size = new System.Drawing.Size(90, 13);
+            this.EquipStatAcc2.Size = new System.Drawing.Size(10, 13);
             this.EquipStatAcc2.TabIndex = 11;
             this.EquipStatAcc2.Text = " ";
             // 
@@ -680,7 +668,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAccII1.AutoSize = true;
             this.EnchantStatAccII1.Location = new System.Drawing.Point(234, 82);
             this.EnchantStatAccII1.Name = "EnchantStatAccII1";
-            this.EnchantStatAccII1.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatAccII1.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatAccII1.TabIndex = 10;
             this.EnchantStatAccII1.Text = " ";
             // 
@@ -689,7 +677,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAccII2.AutoSize = true;
             this.EnchantStatAccII2.Location = new System.Drawing.Point(234, 119);
             this.EnchantStatAccII2.Name = "EnchantStatAccII2";
-            this.EnchantStatAccII2.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatAccII2.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatAccII2.TabIndex = 9;
             this.EnchantStatAccII2.Text = " ";
             // 
@@ -698,7 +686,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAccII3.AutoSize = true;
             this.EnchantStatAccII3.Location = new System.Drawing.Point(234, 155);
             this.EnchantStatAccII3.Name = "EnchantStatAccII3";
-            this.EnchantStatAccII3.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatAccII3.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatAccII3.TabIndex = 8;
             this.EnchantStatAccII3.Text = " ";
             // 
@@ -707,7 +695,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAccII4.AutoSize = true;
             this.EnchantStatAccII4.Location = new System.Drawing.Point(234, 191);
             this.EnchantStatAccII4.Name = "EnchantStatAccII4";
-            this.EnchantStatAccII4.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatAccII4.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatAccII4.TabIndex = 7;
             this.EnchantStatAccII4.Text = " ";
             // 
@@ -770,7 +758,7 @@ namespace WindowsFormsApp1
             this.Ammo.Controls.Add(this.AmmoEquip);
             this.Ammo.Location = new System.Drawing.Point(4, 22);
             this.Ammo.Name = "Ammo";
-            this.Ammo.Size = new System.Drawing.Size(678, 405);
+            this.Ammo.Size = new System.Drawing.Size(553, 405);
             this.Ammo.TabIndex = 5;
             this.Ammo.Text = "Ammo";
             this.Ammo.UseVisualStyleBackColor = true;
@@ -780,7 +768,7 @@ namespace WindowsFormsApp1
             this.EquipStatAmmo.AutoSize = true;
             this.EquipStatAmmo.Location = new System.Drawing.Point(234, 38);
             this.EquipStatAmmo.Name = "EquipStatAmmo";
-            this.EquipStatAmmo.Size = new System.Drawing.Size(90, 13);
+            this.EquipStatAmmo.Size = new System.Drawing.Size(10, 13);
             this.EquipStatAmmo.TabIndex = 11;
             this.EquipStatAmmo.Text = " ";
             // 
@@ -789,7 +777,7 @@ namespace WindowsFormsApp1
             this.EnchantStatAmmo1.AutoSize = true;
             this.EnchantStatAmmo1.Location = new System.Drawing.Point(234, 82);
             this.EnchantStatAmmo1.Name = "EnchantStatAmmo1";
-            this.EnchantStatAmmo1.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatAmmo1.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatAmmo1.TabIndex = 10;
             this.EnchantStatAmmo1.Text = " ";
             // 
@@ -798,25 +786,23 @@ namespace WindowsFormsApp1
             this.EnchantStatAmmo2.AutoSize = true;
             this.EnchantStatAmmo2.Location = new System.Drawing.Point(234, 119);
             this.EnchantStatAmmo2.Name = "EnchantStatAmmo2";
-            this.EnchantStatAmmo2.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatAmmo2.Size = new System.Drawing.Size(0, 13);
             this.EnchantStatAmmo2.TabIndex = 9;
-            this.EnchantStatAmmo2.Text = "";
             // 
             // EnchantStatAmmo3
             // 
             this.EnchantStatAmmo3.AutoSize = true;
             this.EnchantStatAmmo3.Location = new System.Drawing.Point(234, 155);
             this.EnchantStatAmmo3.Name = "EnchantStatAmmo3";
-            this.EnchantStatAmmo3.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatAmmo3.Size = new System.Drawing.Size(0, 13);
             this.EnchantStatAmmo3.TabIndex = 8;
-            this.EnchantStatAmmo3.Text = "";
             // 
             // EnchantStatAmmo4
             // 
             this.EnchantStatAmmo4.AutoSize = true;
             this.EnchantStatAmmo4.Location = new System.Drawing.Point(234, 191);
             this.EnchantStatAmmo4.Name = "EnchantStatAmmo4";
-            this.EnchantStatAmmo4.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatAmmo4.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatAmmo4.TabIndex = 7;
             this.EnchantStatAmmo4.Text = " ";
             // 
@@ -879,7 +865,7 @@ namespace WindowsFormsApp1
             this.MainHand.Controls.Add(this.MainEquip);
             this.MainHand.Location = new System.Drawing.Point(4, 22);
             this.MainHand.Name = "MainHand";
-            this.MainHand.Size = new System.Drawing.Size(678, 405);
+            this.MainHand.Size = new System.Drawing.Size(553, 405);
             this.MainHand.TabIndex = 6;
             this.MainHand.Text = "Main-Hand";
             this.MainHand.UseVisualStyleBackColor = true;
@@ -889,7 +875,7 @@ namespace WindowsFormsApp1
             this.EquipStatMain.AutoSize = true;
             this.EquipStatMain.Location = new System.Drawing.Point(234, 38);
             this.EquipStatMain.Name = "EquipStatMain";
-            this.EquipStatMain.Size = new System.Drawing.Size(90, 13);
+            this.EquipStatMain.Size = new System.Drawing.Size(10, 13);
             this.EquipStatMain.TabIndex = 11;
             this.EquipStatMain.Text = " ";
             // 
@@ -898,7 +884,7 @@ namespace WindowsFormsApp1
             this.EnchantStatMain1.AutoSize = true;
             this.EnchantStatMain1.Location = new System.Drawing.Point(234, 82);
             this.EnchantStatMain1.Name = "EnchantStatMain1";
-            this.EnchantStatMain1.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatMain1.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatMain1.TabIndex = 10;
             this.EnchantStatMain1.Text = " ";
             // 
@@ -907,7 +893,7 @@ namespace WindowsFormsApp1
             this.EnchantStatMain2.AutoSize = true;
             this.EnchantStatMain2.Location = new System.Drawing.Point(234, 119);
             this.EnchantStatMain2.Name = "EnchantStatMain2";
-            this.EnchantStatMain2.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatMain2.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatMain2.TabIndex = 9;
             this.EnchantStatMain2.Text = " ";
             // 
@@ -916,7 +902,7 @@ namespace WindowsFormsApp1
             this.EnchantStatMain3.AutoSize = true;
             this.EnchantStatMain3.Location = new System.Drawing.Point(234, 155);
             this.EnchantStatMain3.Name = "EnchantStatMain3";
-            this.EnchantStatMain3.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatMain3.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatMain3.TabIndex = 8;
             this.EnchantStatMain3.Text = " ";
             // 
@@ -925,7 +911,7 @@ namespace WindowsFormsApp1
             this.EnchantStatMain4.AutoSize = true;
             this.EnchantStatMain4.Location = new System.Drawing.Point(234, 191);
             this.EnchantStatMain4.Name = "EnchantStatMain4";
-            this.EnchantStatMain4.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatMain4.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatMain4.TabIndex = 7;
             this.EnchantStatMain4.Text = " ";
             // 
@@ -988,7 +974,7 @@ namespace WindowsFormsApp1
             this.OffHand.Controls.Add(this.OffEquip);
             this.OffHand.Location = new System.Drawing.Point(4, 22);
             this.OffHand.Name = "OffHand";
-            this.OffHand.Size = new System.Drawing.Size(393, 405);
+            this.OffHand.Size = new System.Drawing.Size(553, 405);
             this.OffHand.TabIndex = 7;
             this.OffHand.Text = "Off-Hand";
             this.OffHand.UseVisualStyleBackColor = true;
@@ -998,7 +984,7 @@ namespace WindowsFormsApp1
             this.EquipStatOff.AutoSize = true;
             this.EquipStatOff.Location = new System.Drawing.Point(234, 38);
             this.EquipStatOff.Name = "EquipStatOff";
-            this.EquipStatOff.Size = new System.Drawing.Size(90, 13);
+            this.EquipStatOff.Size = new System.Drawing.Size(10, 13);
             this.EquipStatOff.TabIndex = 11;
             this.EquipStatOff.Text = " ";
             // 
@@ -1007,7 +993,7 @@ namespace WindowsFormsApp1
             this.EnchantStatOff1.AutoSize = true;
             this.EnchantStatOff1.Location = new System.Drawing.Point(234, 82);
             this.EnchantStatOff1.Name = "EnchantStatOff1";
-            this.EnchantStatOff1.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatOff1.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatOff1.TabIndex = 10;
             this.EnchantStatOff1.Text = " ";
             // 
@@ -1016,7 +1002,7 @@ namespace WindowsFormsApp1
             this.EnchantStatOff2.AutoSize = true;
             this.EnchantStatOff2.Location = new System.Drawing.Point(234, 119);
             this.EnchantStatOff2.Name = "EnchantStatOff2";
-            this.EnchantStatOff2.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatOff2.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatOff2.TabIndex = 9;
             this.EnchantStatOff2.Text = " ";
             // 
@@ -1025,7 +1011,7 @@ namespace WindowsFormsApp1
             this.EnchantStatOff3.AutoSize = true;
             this.EnchantStatOff3.Location = new System.Drawing.Point(234, 155);
             this.EnchantStatOff3.Name = "EnchantStatOff3";
-            this.EnchantStatOff3.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatOff3.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatOff3.TabIndex = 8;
             this.EnchantStatOff3.Text = " ";
             // 
@@ -1034,7 +1020,7 @@ namespace WindowsFormsApp1
             this.EnchantStatOff4.AutoSize = true;
             this.EnchantStatOff4.Location = new System.Drawing.Point(234, 191);
             this.EnchantStatOff4.Name = "EnchantStatOff4";
-            this.EnchantStatOff4.Size = new System.Drawing.Size(90, 13);
+            this.EnchantStatOff4.Size = new System.Drawing.Size(10, 13);
             this.EnchantStatOff4.TabIndex = 7;
             this.EnchantStatOff4.Text = " ";
             // 
@@ -1536,14 +1522,14 @@ namespace WindowsFormsApp1
             this.Acc1EnchantDisplay.TabIndex = 10;
             this.Acc1EnchantDisplay.Text = "label8";
             // 
-            // Acc2EqiupDisplay
+            // Acc2EquipDisplay
             // 
-            this.Acc2EqiupDisplay.AutoSize = true;
-            this.Acc2EqiupDisplay.Location = new System.Drawing.Point(817, 298);
-            this.Acc2EqiupDisplay.Name = "Acc2EqiupDisplay";
-            this.Acc2EqiupDisplay.Size = new System.Drawing.Size(35, 13);
-            this.Acc2EqiupDisplay.TabIndex = 11;
-            this.Acc2EqiupDisplay.Text = "label9";
+            this.Acc2EquipDisplay.AutoSize = true;
+            this.Acc2EquipDisplay.Location = new System.Drawing.Point(817, 298);
+            this.Acc2EquipDisplay.Name = "Acc2EquipDisplay";
+            this.Acc2EquipDisplay.Size = new System.Drawing.Size(35, 13);
+            this.Acc2EquipDisplay.TabIndex = 11;
+            this.Acc2EquipDisplay.Text = "label9";
             // 
             // Acc2EnchantDisplay
             // 
@@ -1650,7 +1636,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.AmmoEnchantDisplay);
             this.Controls.Add(this.AmmoEquipDisplay);
             this.Controls.Add(this.Acc2EnchantDisplay);
-            this.Controls.Add(this.Acc2EqiupDisplay);
+            this.Controls.Add(this.Acc2EquipDisplay);
             this.Controls.Add(this.Acc1EnchantDisplay);
             this.Controls.Add(this.Acc1EquipDisplay);
             this.Controls.Add(this.GliderEnchantDisplay);
@@ -1681,483 +1667,20 @@ namespace WindowsFormsApp1
             this.MainHand.PerformLayout();
             this.OffHand.ResumeLayout(false);
             this.OffHand.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
-        #endregion
-
-        #region Get functions
-        public Enchant getEnchant(string n, HashSet<Enchant> EnList)
-        {
-            foreach (Enchant en in EnList)
-                if (n == en.name)
-                {
-                    return en;
-                }
-            return new Enchant(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "None");
-        }
-
-        public Equipment getEquipment(string n, HashSet<Equipment> Equips)
-        {
-            foreach(Equipment eq in Equips)
-            {
-                if (n == eq.name)
-                {
-                    return eq;
-                }
-            }
-            return new Equipment("Error", -1, -1, -1, new HashSet<Material> { });
-        }
         #endregion
 
 
 
         
-
-            if (e.def_Static != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.def_Static > 0) stats += "+";
-                stats += e.def_Static + " Def";
-            }
-            
-            if (e.def_Percent != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-
-                if (e.def_Percent > 0) stats += "+";
-                stats += e.def_Percent + "% Def";
-            }
-
-            if (e.matk_Static != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.matk_Static > 0) stats += "+";
-                stats += e.matk_Static + " MAtk";
-            }
-
-            if (e.matk_Percent != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.matk_Percent > 0) stats += "+";
-                stats += e.matk_Percent + "% MAtk";
-            }
-
-            if (e.crit_Damage != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.crit_Damage > 0) stats += "+";
-                stats += e.crit_Damage + "% Crit dmg";
-            }
-
-            if (e.crit_Chance != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.crit_Chance > 0) stats += "+";
-                stats += e.crit_Chance + "% Crit";
-            }
-
-            if (e.move_Speed != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.move_Speed > 0) stats += "+";
-                stats += e.move_Speed + " Move Spd";
-            }
-
-            if (e.atk_Speed != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.atk_Speed > 0) stats += "+";
-                stats += e.atk_Speed + " Atk Spd";
-            }
-
-            if (e.mana_Static != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.mana_Static > 0) stats += "+";
-                stats += e.mana_Static + " Mana";
-            }
-
-            if (e.mana_Percent != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.mana_Percent > 0) stats += "+";
-                stats += e.mana_Percent + "% Mana";
-            }
-
-            if (e.stam_Static != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.stam_Static > 0) stats += "+";
-                stats += e.stam_Static + " Stam";
-            }
-
-            if (e.stam_Percent != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.stam_Percent > 0) stats += "+";
-                stats += e.stam_Percent + "% Stam";
-            }
-
-            if (e.life_Static != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.life_Static > 0) stats += "+";
-                stats += e.life_Static + " HP";
-            }
-
-            if (e.life_Percent != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.life_Percent > 0) stats += "+";
-                stats += e.life_Percent + "% HP";
-            }
-
-            if (e.hung_Static != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.hung_Static > 0) stats += "+";
-                stats += e.hung_Static + " Sat";
-            }
-
-            if (e.hung_Percent != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.hung_Percent > 0) stats += "+";
-                stats += e.hung_Percent + "% Sat";
-            }
-
-            return stats;
-        }
-
-        private string getEqStats(string n, HashSet<Equipment> eqL)
-        {
-            foreach(Equipment e in eqL)
-            {
-                if (n == e.name)
-                    return e.atk + " ATK, " + e.matk + " MATK, " + e.def + " DEF";
-            }
-            return "Error";
-        }
-
-
-        //method to calc stat
-       /* public void calcStats()
-        {
-
-            foreach (System.Windows.Forms.ComboBox cb in
-                new List<System.Windows.Forms.ComboBox> {
-                    HeadEquip, BodyEquip, GliderEquip, Acc1Equip, Acc2Equip, AmmoEquip, MainEquip, OffEquip
-                })
-            {
-                if (cb.SelectedItem != null)
-                {
-                    ttl_atk_Static += getEquipment((string)cb.SelectedItem, EqLib.allEq).atk;
-                    ttl_matk_Static += getEquipment((string)cb.SelectedItem, EqLib.allEq).matk;
-                    ttl_def_Static += getEquipment((string)cb.SelectedItem, EqLib.allEq).def;
-                }
-            }
-
-            foreach (System.Windows.Forms.ComboBox cb in 
-                new List<System.Windows.Forms.ComboBox> { 
-                    EnchantHead1, EnchantHead2, EnchantHead3, EnchantHead4,
-                    BodyEnchant1, BodyEnchant2, BodyEnchant3, BodyEnchant4,
-                    GliderEnchant1, GliderEnchant2, GliderEnchant3, GliderEnchant4,
-                    Acc1Enchant1, Acc1Enchant2, Acc1Enchant3, Acc1Enchant4, 
-                    Acc2Enchant1, Acc2Enchant2, Acc2Enchant3, Acc2Enchant4,
-                    AmmoEnchant1, AmmoEnchant2, AmmoEnchant3, AmmoEnchant4,
-                    MainEnchant1, MainEnchant2, MainEnchant3, MainEnchant4,
-                    OffEnchant1, OffEnchant2, OffEnchant3, OffEnchant4
-                })
-            {
-                if(cb.SelectedItem != null)
-                {
-                    ttl_atk_Static += getEnchant((string)cb.SelectedItem,EqLib.getAllEnchants()).atk_Static;
-                    ttl_atk_Percent += getEnchant((string)cb.SelectedItem, EqLib.getAllEnchants()).atk_Percent;
-                    ttl_def_Static += getEnchant((string)cb.SelectedItem, EqLib.getAllEnchants()).def_Static;
-                    ttl_def_Percent += getEnchant((string)cb.SelectedItem, EqLib.getAllEnchants()).def_Percent;
-                    ttl_matk_Static += getEnchant((string)cb.SelectedItem, EqLib.getAllEnchants()).matk_Static;
-                    ttl_matk_Percent += getEnchant((string)cb.SelectedItem, EqLib.getAllEnchants()).matk_Percent;
-                    ttl_crit_Damage += getEnchant((string)cb.SelectedItem, EqLib.getAllEnchants()).crit_Damage;
-                    ttl_crit_Chance += getEnchant((string)cb.SelectedItem, EqLib.getAllEnchants()).crit_Chance;
-                    ttl_move_Speed += getEnchant((string)cb.SelectedItem, EqLib.getAllEnchants()).move_Speed;
-                    ttl_atk_Speed += getEnchant((string)cb.SelectedItem, EqLib.getAllEnchants()).atk_Speed;
-                    ttl_mana_Static += getEnchant((string)cb.SelectedItem, EqLib.getAllEnchants()).mana_Static;
-                    ttl_mana_Percent += getEnchant((string)cb.SelectedItem, EqLib.getAllEnchants()).mana_Percent;
-                    ttl_stam_Static += getEnchant((string)cb.SelectedItem, EqLib.getAllEnchants()).stam_Static;
-                    ttl_stam_Percent += getEnchant((string)cb.SelectedItem, EqLib.getAllEnchants()).stam_Percent;
-                    ttl_life_Static += getEnchant((string)cb.SelectedItem, EqLib.getAllEnchants()).life_Static;
-                    ttl_life_Percent += getEnchant((string)cb.SelectedItem, EqLib.getAllEnchants()).life_Percent;
-                    ttl_hung_Static += getEnchant((string)cb.SelectedItem, EqLib.getAllEnchants()).hung_Static;
-                    ttl_hung_Percent += getEnchant((string)cb.SelectedItem, EqLib.getAllEnchants()).hung_Percent;
-                }
-            }
-
-        
-
-
-        }*/
-
-        public void calcStat(List<string> ls, string n, string e1, string e2, string e3, string e4)
-        {
-            Equipment
-                oldN = getEquipment(ls[0], EqLib.allEq),
-                tempN = getEquipment(n, EqLib.allEq);
-            Enchant 
-                Oe1 = getEnchant(ls[1], EqLib.getAllEnchants()),
-                Oe2 = getEnchant(ls[2], EqLib.getAllEnchants()),
-                Oe3 = getEnchant(ls[3], EqLib.getAllEnchants()),
-                Oe4 = getEnchant(ls[4], EqLib.getAllEnchants()),
-                Te1 = getEnchant(e1, EqLib.getAllEnchants()),
-                Te2 = getEnchant(e2, EqLib.getAllEnchants()),
-                Te3 = getEnchant(e3, EqLib.getAllEnchants()),
-                Te4 = getEnchant(e4, EqLib.getAllEnchants());
-
-            if (!ls.Contains(n))
-            {
-                #region out with the old
-                ttl_atk_Static -= (oldN.atk + Oe1.atk_Static + Oe2.atk_Static + Oe3.atk_Static + Oe4.atk_Static);
-                ttl_atk_Percent -= (Oe1.atk_Percent + Oe2.atk_Percent + Oe3.atk_Percent + Oe4.atk_Percent);
-                ttl_def_Static -= (oldN.def + Oe1.def_Static + Oe2.def_Static + Oe3.def_Static + Oe4.def_Static);
-                ttl_def_Percent -= (Oe1.def_Percent + Oe2.def_Percent + Oe3.def_Percent + Oe4.def_Percent);
-                ttl_matk_Static -= (oldN.matk + Oe1.matk_Static + Oe2.matk_Static + Oe3.matk_Static + Oe4.matk_Static);
-                ttl_matk_Percent -= (Oe1.matk_Percent + Oe2.matk_Percent + Oe3.matk_Percent + Oe4.matk_Percent);
-                ttl_crit_Damage -= (Oe1.crit_Damage + Oe2.crit_Damage + Oe3.crit_Damage + Oe4.crit_Damage);
-                ttl_crit_Chance -= (Oe1.crit_Chance + Oe2.crit_Chance + Oe3.crit_Chance + Oe4.crit_Chance);
-                ttl_move_Speed -= (Oe1.move_Speed + Oe2.move_Speed + Oe3.move_Speed + Oe4.move_Speed);
-                ttl_atk_Speed -= (Oe1.atk_Speed + Oe2.atk_Speed + Oe3.atk_Speed + Oe4.atk_Speed);
-                ttl_mana_Static -= (Oe1.mana_Static + Oe2.mana_Static + Oe3.mana_Static + Oe4.mana_Static);
-                ttl_mana_Percent -= (Oe1.mana_Percent + Oe2.mana_Percent + Oe3.mana_Percent + Oe4.mana_Percent);
-                ttl_stam_Static -= (Oe1.stam_Static + Oe2.stam_Static + Oe3.stam_Static + Oe4.stam_Static);
-                ttl_stam_Percent -= (Oe1.stam_Percent + Oe2.stam_Percent + Oe3.stam_Percent + Oe4.stam_Percent);
-                ttl_life_Static -= (Oe1.life_Static + Oe2.life_Static + Oe3.life_Static + Oe4.life_Static);
-                ttl_life_Percent -= (Oe1.life_Percent + Oe2.life_Percent + Oe3.life_Percent + Oe4.life_Percent);
-                ttl_hung_Static -= (Oe1.hung_Static + Oe2.hung_Static + Oe3.hung_Static + Oe4.hung_Static);
-                ttl_hung_Percent -= (Oe1.hung_Percent + Oe2.hung_Percent + Oe3.hung_Percent + Oe4.hung_Percent);
-                #endregion
-
-                #region in with the new
-                ttl_atk_Static += tempN.atk;
-                ttl_def_Static += tempN.def;
-                ttl_matk_Static += tempN.matk;
-                #endregion
-            }
-            else
-            {
-                if (!ls.Contains(e1))
-                {
-                    #region out with the old
-                    ttl_atk_Static -= Oe1.atk_Static;
-                    ttl_atk_Percent -= Oe1.atk_Percent;
-                    ttl_def_Static -= Oe1.def_Static;
-                    ttl_def_Percent -= Oe1.def_Percent;
-                    ttl_matk_Static -= Oe1.matk_Static;
-                    ttl_matk_Percent -= Oe1.matk_Percent;
-                    ttl_crit_Damage -= Oe1.crit_Damage;
-                    ttl_crit_Chance -= Oe1.crit_Chance;
-                    ttl_move_Speed -= Oe1.move_Speed;
-                    ttl_atk_Speed -= Oe1.atk_Speed;
-                    ttl_mana_Static -= Oe1.mana_Static;
-                    ttl_mana_Percent -= Oe1.mana_Percent;
-                    ttl_stam_Static -= Oe1.stam_Static;
-                    ttl_stam_Percent -= Oe1.stam_Percent;
-                    ttl_life_Static -= Oe1.life_Static;
-                    ttl_life_Percent -= Oe1.life_Percent;
-                    ttl_hung_Static -= Oe1.hung_Static;
-                    ttl_hung_Percent -= Oe1.hung_Percent;
-                    #endregion
-
-                    #region in with the new
-                    ttl_atk_Static += Te1.atk_Static;
-                    ttl_atk_Percent += Te1.atk_Percent;
-                    ttl_def_Static += Te1.def_Static;
-                    ttl_def_Percent += Te1.def_Percent;
-                    ttl_matk_Static += Te1.matk_Static;
-                    ttl_matk_Percent += Te1.matk_Percent;
-                    ttl_crit_Damage += Te1.crit_Damage;
-                    ttl_crit_Chance += Te1.crit_Chance;
-                    ttl_move_Speed += Te1.move_Speed;
-                    ttl_atk_Speed += Te1.atk_Speed;
-                    ttl_mana_Static += Te1.mana_Static;
-                    ttl_mana_Percent += Te1.mana_Percent;
-                    ttl_stam_Static += Te1.stam_Static;
-                    ttl_stam_Percent += Te1.stam_Percent;
-                    ttl_life_Static += Te1.life_Static;
-                    ttl_life_Percent += Te1.life_Percent;
-                    ttl_hung_Static += Te1.hung_Static;
-                    ttl_hung_Percent += Te1.hung_Percent;
-                    #endregion
-                }
-                if (!ls.Contains(e2))
-                {
-                    #region out with the old
-                    ttl_atk_Static -= Oe2.atk_Static;
-                    ttl_atk_Percent -= Oe2.atk_Percent;
-                    ttl_def_Static -= Oe2.def_Static;
-                    ttl_def_Percent -= Oe2.def_Percent;
-                    ttl_matk_Static -= Oe2.matk_Static;
-                    ttl_matk_Percent -= Oe2.matk_Percent;
-                    ttl_crit_Damage -= Oe2.crit_Damage;
-                    ttl_crit_Chance -= Oe2.crit_Chance;
-                    ttl_move_Speed -= Oe2.move_Speed;
-                    ttl_atk_Speed -= Oe2.atk_Speed;
-                    ttl_mana_Static -= Oe2.mana_Static;
-                    ttl_mana_Percent -= Oe2.mana_Percent;
-                    ttl_stam_Static -= Oe2.stam_Static;
-                    ttl_stam_Percent -= Oe2.stam_Percent;
-                    ttl_life_Static -= Oe2.life_Static;
-                    ttl_life_Percent -= Oe2.life_Percent;
-                    ttl_hung_Static -= Oe2.hung_Static;
-                    ttl_hung_Percent -= Oe2.hung_Percent;
-                    #endregion
-
-                    #region in with the new
-                    ttl_atk_Static += Te2.atk_Static;
-                    ttl_atk_Percent += Te2.atk_Percent;
-                    ttl_def_Static += Te2.def_Static;
-                    ttl_def_Percent += Te2.def_Percent;
-                    ttl_matk_Static += Te2.matk_Static;
-                    ttl_matk_Percent += Te2.matk_Percent;
-                    ttl_crit_Damage += Te2.crit_Damage;
-                    ttl_crit_Chance += Te2.crit_Chance;
-                    ttl_move_Speed += Te2.move_Speed;
-                    ttl_atk_Speed += Te2.atk_Speed;
-                    ttl_mana_Static += Te2.mana_Static;
-                    ttl_mana_Percent += Te2.mana_Percent;
-                    ttl_stam_Static += Te2.stam_Static;
-                    ttl_stam_Percent += Te2.stam_Percent;
-                    ttl_life_Static += Te2.life_Static;
-                    ttl_life_Percent += Te2.life_Percent;
-                    ttl_hung_Static += Te2.hung_Static;
-                    ttl_hung_Percent += Te2.hung_Percent;
-                    #endregion
-                }
-                if (!ls.Contains(e3))
-                {
-                    #region out with the old
-                    ttl_atk_Static -= Oe3.atk_Static;
-                    ttl_atk_Percent -= Oe3.atk_Percent;
-                    ttl_def_Static -= Oe3.def_Static;
-                    ttl_def_Percent -= Oe3.def_Percent;
-                    ttl_matk_Static -= Oe3.matk_Static;
-                    ttl_matk_Percent -= Oe3.matk_Percent;
-                    ttl_crit_Damage -= Oe3.crit_Damage;
-                    ttl_crit_Chance -= Oe3.crit_Chance;
-                    ttl_move_Speed -= Oe3.move_Speed;
-                    ttl_atk_Speed -= Oe3.atk_Speed;
-                    ttl_mana_Static -= Oe3.mana_Static;
-                    ttl_mana_Percent -= Oe3.mana_Percent;
-                    ttl_stam_Static -= Oe3.stam_Static;
-                    ttl_stam_Percent -= Oe3.stam_Percent;
-                    ttl_life_Static -= Oe3.life_Static;
-                    ttl_life_Percent -= Oe3.life_Percent;
-                    ttl_hung_Static -= Oe3.hung_Static;
-                    ttl_hung_Percent -= Oe3.hung_Percent;
-                    #endregion
-
-                    #region in with the new
-                    ttl_atk_Static += Te3.atk_Static;
-                    ttl_atk_Percent += Te3.atk_Percent;
-                    ttl_def_Static += Te3.def_Static;
-                    ttl_def_Percent += Te3.def_Percent;
-                    ttl_matk_Static += Te3.matk_Static;
-                    ttl_matk_Percent += Te3.matk_Percent;
-                    ttl_crit_Damage += Te3.crit_Damage;
-                    ttl_crit_Chance += Te3.crit_Chance;
-                    ttl_move_Speed += Te3.move_Speed;
-                    ttl_atk_Speed += Te3.atk_Speed;
-                    ttl_mana_Static += Te3.mana_Static;
-                    ttl_mana_Percent += Te3.mana_Percent;
-                    ttl_stam_Static += Te3.stam_Static;
-                    ttl_stam_Percent += Te3.stam_Percent;
-                    ttl_life_Static += Te3.life_Static;
-                    ttl_life_Percent += Te3.life_Percent;
-                    ttl_hung_Static += Te3.hung_Static;
-                    ttl_hung_Percent += Te3.hung_Percent;
-                    #endregion
-                }
-                if (!ls.Contains(e4))
-                {
-                    #region out with the old
-                    ttl_atk_Static -= Oe4.atk_Static;
-                    ttl_atk_Percent -= Oe4.atk_Percent;
-                    ttl_def_Static -= Oe4.def_Static;
-                    ttl_def_Percent -= Oe4.def_Percent;
-                    ttl_matk_Static -= Oe4.matk_Static;
-                    ttl_matk_Percent -= Oe4.matk_Percent;
-                    ttl_crit_Damage -= Oe4.crit_Damage;
-                    ttl_crit_Chance -= Oe4.crit_Chance;
-                    ttl_move_Speed -= Oe4.move_Speed;
-                    ttl_atk_Speed -= Oe4.atk_Speed;
-                    ttl_mana_Static -= Oe4.mana_Static;
-                    ttl_mana_Percent -= Oe4.mana_Percent;
-                    ttl_stam_Static -= Oe4.stam_Static;
-                    ttl_stam_Percent -= Oe4.stam_Percent;
-                    ttl_life_Static -= Oe4.life_Static;
-                    ttl_life_Percent -= Oe4.life_Percent;
-                    ttl_hung_Static -= Oe4.hung_Static;
-                    ttl_hung_Percent -= Oe4.hung_Percent;
-                    #endregion
-
-                    #region in with the new
-                    ttl_atk_Static += Te4.atk_Static;
-                    ttl_atk_Percent += Te4.atk_Percent;
-                    ttl_def_Static += Te4.def_Static;
-                    ttl_def_Percent += Te4.def_Percent;
-                    ttl_matk_Static += Te4.matk_Static;
-                    ttl_matk_Percent += Te4.matk_Percent;
-                    ttl_crit_Damage += Te4.crit_Damage;
-                    ttl_crit_Chance += Te4.crit_Chance;
-                    ttl_move_Speed += Te4.move_Speed;
-                    ttl_atk_Speed += Te4.atk_Speed;
-                    ttl_mana_Static += Te4.mana_Static;
-                    ttl_mana_Percent += Te4.mana_Percent;
-                    ttl_stam_Static += Te4.stam_Static;
-                    ttl_stam_Percent += Te4.stam_Percent;
-                    ttl_life_Static += Te4.life_Static;
-                    ttl_life_Percent += Te4.life_Percent;
-                    ttl_hung_Static += Te4.hung_Static;
-                    ttl_hung_Percent += Te4.hung_Percent;
-                    #endregion
-                }
-            }
-
-        }
-
-        #endregion
 
         #region All the variables
         private System.Windows.Forms.TabControl tabControl1;
@@ -2297,7 +1820,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label GliderEnchantDisplay;
         private System.Windows.Forms.Label Acc1EquipDisplay;
         private System.Windows.Forms.Label Acc1EnchantDisplay;
-        private System.Windows.Forms.Label Acc2EqiupDisplay;
+        private System.Windows.Forms.Label Acc2EquipDisplay;
         private System.Windows.Forms.Label Acc2EnchantDisplay;
         private System.Windows.Forms.Label AmmoEquipDisplay;
         private System.Windows.Forms.Label AmmoEnchantDisplay;
