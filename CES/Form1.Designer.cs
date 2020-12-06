@@ -202,7 +202,6 @@ namespace WindowsFormsApp1
             this.EnchantStatHead1.Size = new System.Drawing.Size(35, 13);
             this.EnchantStatHead1.TabIndex = 6;
             this.EnchantStatHead1.Text = "--No Enchant--";
-            this.EnchantStatHead1.Click += new System.EventHandler(this.label2_Click);
             // 
             // EquipStatHead
             // 
@@ -211,8 +210,7 @@ namespace WindowsFormsApp1
             this.EquipStatHead.Name = "EquipStatHead";
             this.EquipStatHead.Size = new System.Drawing.Size(90, 13);
             this.EquipStatHead.TabIndex = 5;
-            this.EquipStatHead.Text = "--No Equipment--";
-            this.EquipStatHead.Click += new System.EventHandler(this.label1_Click);
+            this.EquipStatHead.Text = "";
             // 
             // EnchantHead4
             // 
@@ -245,7 +243,7 @@ namespace WindowsFormsApp1
             this.EnchantHead1.Name = "EnchantHead1";
             this.EnchantHead1.Size = new System.Drawing.Size(121, 21);
             this.EnchantHead1.TabIndex = 1;
-            this.EnchantHead1.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.EnchantHead1.SelectedIndexChanged += new System.EventHandler(this.EnchantHead1_SelectedIndexChanged);
             // 
             // HeadEquip
             // 
@@ -254,7 +252,7 @@ namespace WindowsFormsApp1
             this.HeadEquip.Name = "HeadEquip";
             this.HeadEquip.Size = new System.Drawing.Size(161, 21);
             this.HeadEquip.TabIndex = 0;
-            this.HeadEquip.SelectedIndexChanged += new System.EventHandler(this.HeadPiece_SelectedIndexChanged);
+            this.HeadEquip.SelectedIndexChanged += new System.EventHandler(this.HeadEquip_SelectedIndexChanged);
             #endregion
             #region Body
             // 
@@ -362,7 +360,7 @@ namespace WindowsFormsApp1
             this.BodyEquip.Name = "BodyEquip";
             this.BodyEquip.Size = new System.Drawing.Size(161, 21);
             this.BodyEquip.TabIndex = 1;
-            this.BodyEquip.SelectedIndexChanged += new System.EventHandler(this.BodyPiece_SelectedIndexChanged);
+            this.BodyEquip.SelectedIndexChanged += new System.EventHandler(this.BodyEquip_SelectedIndexChanged);
             #endregion
             #region Glider
             // 
@@ -469,6 +467,8 @@ namespace WindowsFormsApp1
             this.GliderEquip.Name = "GliderEquip";
             this.GliderEquip.Size = new System.Drawing.Size(161, 21);
             this.GliderEquip.TabIndex = 1;
+            this.GliderEquip.SelectedIndexChanged += new System.EventHandler(this.GliderEquip_SelectedIndexChanged);
+
             #endregion
             #region Accessory 1
             // 
@@ -575,6 +575,8 @@ namespace WindowsFormsApp1
             this.Acc1Equip.Name = "Acc1Equip";
             this.Acc1Equip.Size = new System.Drawing.Size(161, 21);
             this.Acc1Equip.TabIndex = 2;
+            this.Acc1Equip.SelectedIndexChanged += new System.EventHandler(this.Acc1Equip_SelectedIndexChanged);
+
             #endregion
             #region Accessory 2
             // 
@@ -681,6 +683,8 @@ namespace WindowsFormsApp1
             this.Acc2Equip.Name = "Acc2Equip";
             this.Acc2Equip.Size = new System.Drawing.Size(161, 21);
             this.Acc2Equip.TabIndex = 2;
+            this.Acc2Equip.SelectedIndexChanged += new System.EventHandler(this.Acc2Equip_SelectedIndexChanged);
+
             #endregion
             #region Ammo
             // 
@@ -787,6 +791,8 @@ namespace WindowsFormsApp1
             this.AmmoEquip.Name = "AmmoEquip";
             this.AmmoEquip.Size = new System.Drawing.Size(161, 21);
             this.AmmoEquip.TabIndex = 2;
+            this.AmmoEquip.SelectedIndexChanged += new System.EventHandler(this.AmmoEquip_SelectedIndexChanged);
+
             #endregion
             #region Main Hand
             // 
@@ -1040,9 +1046,6 @@ namespace WindowsFormsApp1
             this.ResumeLayout(false);
             #endregion
 
-            //Create EquipmentLibrary Object to contain all backend info
-            EquipmentLibrary EqLib = new EquipmentLibrary();
-
             //Nested foreach to populate 
             //foreach (Equipment eq in EqLib.Head) HeadEquip.Items.Add(eq.name);
 
@@ -1059,7 +1062,7 @@ namespace WindowsFormsApp1
                 {
                     return en;
                 }
-            return null;
+            return new Enchant(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, "Error");
         }
         #endregion
 
@@ -1087,8 +1090,7 @@ namespace WindowsFormsApp1
                 foreach (Enchant enc in temp.EnLib) eBox.Items.Add(enc.name);
             }
         }
-        //Example call:
-        //populateCombo("Copper Hat", EqLib.Head, new List<System.Windows.Forms.ComboBox>{ EnchantHead1,EnchantHead2, EnchantHead3, EnchantHead4});
+
 
 
         /*
@@ -1272,6 +1274,16 @@ namespace WindowsFormsApp1
             }
 
             return stats;
+        }
+
+        private string getEqStats(string n, HashSet<Equipment> eqL)
+        {
+            foreach(Equipment e in eqL)
+            {
+                if (n == e.name)
+                    return e.atk + " ATK, " + e.matk + " MATK, " + e.def + " DEF";
+            }
+            return "Error";
         }
 
         #endregion
