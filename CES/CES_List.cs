@@ -5,6 +5,7 @@ using System.Text;
 
 namespace CES_List
 {
+
 	public class Enchant
 	{
 		public int atk_Static, atk_Percent, def_Static, def_Percent, matk_Static, matk_Percent,
@@ -442,4 +443,5 @@ namespace CES_List
 		public HashSet<Equipment> OffHand = new HashSet<Equipment> { Torch1h, MonPrism, Bucket, CopShield, IronShield, SlvShield, StlShield, TitShield, GoldShield, PlatShield };
 	#endregion
 	}
+
 }

@@ -154,7 +154,7 @@ namespace WindowsFormsApp1
             this.CritDmgDisplayStatic = new System.Windows.Forms.Label();
             this.AtkSpdDisplayStatic = new System.Windows.Forms.Label();
             this.MoveSpdDisplayStatic = new System.Windows.Forms.Label();
-            this.HeadEqipDisplay = new System.Windows.Forms.Label();
+            this.HeadEquipDisplay = new System.Windows.Forms.Label();
             this.HeadEnchantDisplay = new System.Windows.Forms.Label();
             this.BodyEquipDisplay = new System.Windows.Forms.Label();
             this.BodyEnchantDisplay = new System.Windows.Forms.Label();
@@ -199,7 +199,7 @@ namespace WindowsFormsApp1
             this.tabControl1.Location = new System.Drawing.Point(-2, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(686, 431);
+            this.tabControl1.Size = new System.Drawing.Size(561, 431);
             this.tabControl1.TabIndex = 0;
             // 
             // Head
@@ -217,7 +217,7 @@ namespace WindowsFormsApp1
             this.Head.Location = new System.Drawing.Point(4, 22);
             this.Head.Name = "Head";
             this.Head.Padding = new System.Windows.Forms.Padding(3);
-            this.Head.Size = new System.Drawing.Size(678, 405);
+            this.Head.Size = new System.Drawing.Size(553, 405);
             this.Head.TabIndex = 0;
             this.Head.Text = "Head";
             this.Head.UseVisualStyleBackColor = true;
@@ -227,36 +227,32 @@ namespace WindowsFormsApp1
             this.EnchantStatHead4.AutoSize = true;
             this.EnchantStatHead4.Location = new System.Drawing.Point(234, 191);
             this.EnchantStatHead4.Name = "EnchantStatHead4";
-            this.EnchantStatHead4.Size = new System.Drawing.Size(76, 13);
+            this.EnchantStatHead4.Size = new System.Drawing.Size(0, 13);
             this.EnchantStatHead4.TabIndex = 9;
-            this.EnchantStatHead4.Text = "--No Enchant--";
             // 
             // EnchantStatHead3
             // 
             this.EnchantStatHead3.AutoSize = true;
             this.EnchantStatHead3.Location = new System.Drawing.Point(234, 155);
             this.EnchantStatHead3.Name = "EnchantStatHead3";
-            this.EnchantStatHead3.Size = new System.Drawing.Size(76, 13);
+            this.EnchantStatHead3.Size = new System.Drawing.Size(0, 13);
             this.EnchantStatHead3.TabIndex = 8;
-            this.EnchantStatHead3.Text = "--No Enchant--";
             // 
             // EnchantStatHead2
             // 
             this.EnchantStatHead2.AutoSize = true;
             this.EnchantStatHead2.Location = new System.Drawing.Point(234, 119);
             this.EnchantStatHead2.Name = "EnchantStatHead2";
-            this.EnchantStatHead2.Size = new System.Drawing.Size(76, 13);
+            this.EnchantStatHead2.Size = new System.Drawing.Size(0, 13);
             this.EnchantStatHead2.TabIndex = 7;
-            this.EnchantStatHead2.Text = "--No Enchant--";
             // 
             // EnchantStatHead1
             // 
             this.EnchantStatHead1.AutoSize = true;
             this.EnchantStatHead1.Location = new System.Drawing.Point(234, 82);
             this.EnchantStatHead1.Name = "EnchantStatHead1";
-            this.EnchantStatHead1.Size = new System.Drawing.Size(76, 13);
+            this.EnchantStatHead1.Size = new System.Drawing.Size(0, 13);
             this.EnchantStatHead1.TabIndex = 6;
-            this.EnchantStatHead1.Text = "--No Enchant--";
             // 
             // EquipStatHead
             // 
@@ -978,7 +974,7 @@ namespace WindowsFormsApp1
             this.OffHand.Controls.Add(this.OffEquip);
             this.OffHand.Location = new System.Drawing.Point(4, 22);
             this.OffHand.Name = "OffHand";
-            this.OffHand.Size = new System.Drawing.Size(678, 405);
+            this.OffHand.Size = new System.Drawing.Size(393, 405);
             this.OffHand.TabIndex = 7;
             this.OffHand.Text = "Off-Hand";
             this.OffHand.UseVisualStyleBackColor = true;
@@ -1108,7 +1104,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.Controls.Add(this.StamDisplayStatic, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.SatietyDisplayStatic, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.MatkBaseDyn, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(770, 60);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(650, 60);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -1127,10 +1123,7 @@ namespace WindowsFormsApp1
             this.SatTotalDyn.Location = new System.Drawing.Point(153, 206);
             this.SatTotalDyn.Name = "SatTotalDyn";
             this.SatTotalDyn.Size = new System.Drawing.Size(46, 20);
-            this.SatTotalDyn.TabIndex = 27;      
-
-
-
+            this.SatTotalDyn.TabIndex = 27;
             // 
             // PctSatDyn
             // 
@@ -1375,7 +1368,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel2.Controls.Add(this.CritDmgDisplayStatic, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.AtkSpdDisplayStatic, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.MoveSpdDisplayStatic, 0, 3);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(978, 61);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(858, 61);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -1457,19 +1450,19 @@ namespace WindowsFormsApp1
             this.MoveSpdDisplayStatic.TabIndex = 7;
             this.MoveSpdDisplayStatic.Text = "Move Speed";
             // 
-            // HeadEqipDisplay
+            // HeadEquipDisplay
             // 
-            this.HeadEqipDisplay.AutoSize = true;
-            this.HeadEqipDisplay.Location = new System.Drawing.Point(773, 298);
-            this.HeadEqipDisplay.Name = "HeadEqipDisplay";
-            this.HeadEqipDisplay.Size = new System.Drawing.Size(35, 13);
-            this.HeadEqipDisplay.TabIndex = 3;
-            this.HeadEqipDisplay.Text = "label1";
+            this.HeadEquipDisplay.AutoSize = true;
+            this.HeadEquipDisplay.Location = new System.Drawing.Point(653, 298);
+            this.HeadEquipDisplay.Name = "HeadEquipDisplay";
+            this.HeadEquipDisplay.Size = new System.Drawing.Size(35, 13);
+            this.HeadEquipDisplay.TabIndex = 3;
+            this.HeadEquipDisplay.Text = "label1";
             // 
             // HeadEnchantDisplay
             // 
             this.HeadEnchantDisplay.AutoSize = true;
-            this.HeadEnchantDisplay.Location = new System.Drawing.Point(782, 311);
+            this.HeadEnchantDisplay.Location = new System.Drawing.Point(662, 311);
             this.HeadEnchantDisplay.Name = "HeadEnchantDisplay";
             this.HeadEnchantDisplay.Size = new System.Drawing.Size(35, 13);
             this.HeadEnchantDisplay.TabIndex = 4;
@@ -1478,7 +1471,7 @@ namespace WindowsFormsApp1
             // BodyEquipDisplay
             // 
             this.BodyEquipDisplay.AutoSize = true;
-            this.BodyEquipDisplay.Location = new System.Drawing.Point(773, 334);
+            this.BodyEquipDisplay.Location = new System.Drawing.Point(653, 334);
             this.BodyEquipDisplay.Name = "BodyEquipDisplay";
             this.BodyEquipDisplay.Size = new System.Drawing.Size(35, 13);
             this.BodyEquipDisplay.TabIndex = 5;
@@ -1487,7 +1480,7 @@ namespace WindowsFormsApp1
             // BodyEnchantDisplay
             // 
             this.BodyEnchantDisplay.AutoSize = true;
-            this.BodyEnchantDisplay.Location = new System.Drawing.Point(782, 347);
+            this.BodyEnchantDisplay.Location = new System.Drawing.Point(662, 347);
             this.BodyEnchantDisplay.Name = "BodyEnchantDisplay";
             this.BodyEnchantDisplay.Size = new System.Drawing.Size(35, 13);
             this.BodyEnchantDisplay.TabIndex = 6;
@@ -1496,7 +1489,7 @@ namespace WindowsFormsApp1
             // GliderEquipDisplay
             // 
             this.GliderEquipDisplay.AutoSize = true;
-            this.GliderEquipDisplay.Location = new System.Drawing.Point(773, 369);
+            this.GliderEquipDisplay.Location = new System.Drawing.Point(653, 369);
             this.GliderEquipDisplay.Name = "GliderEquipDisplay";
             this.GliderEquipDisplay.Size = new System.Drawing.Size(35, 13);
             this.GliderEquipDisplay.TabIndex = 7;
@@ -1505,7 +1498,7 @@ namespace WindowsFormsApp1
             // GliderEnchantDisplay
             // 
             this.GliderEnchantDisplay.AutoSize = true;
-            this.GliderEnchantDisplay.Location = new System.Drawing.Point(782, 382);
+            this.GliderEnchantDisplay.Location = new System.Drawing.Point(662, 382);
             this.GliderEnchantDisplay.Name = "GliderEnchantDisplay";
             this.GliderEnchantDisplay.Size = new System.Drawing.Size(35, 13);
             this.GliderEnchantDisplay.TabIndex = 8;
@@ -1514,7 +1507,7 @@ namespace WindowsFormsApp1
             // Acc1EquipDisplay
             // 
             this.Acc1EquipDisplay.AutoSize = true;
-            this.Acc1EquipDisplay.Location = new System.Drawing.Point(773, 404);
+            this.Acc1EquipDisplay.Location = new System.Drawing.Point(653, 404);
             this.Acc1EquipDisplay.Name = "Acc1EquipDisplay";
             this.Acc1EquipDisplay.Size = new System.Drawing.Size(35, 13);
             this.Acc1EquipDisplay.TabIndex = 9;
@@ -1523,7 +1516,7 @@ namespace WindowsFormsApp1
             // Acc1EnchantDisplay
             // 
             this.Acc1EnchantDisplay.AutoSize = true;
-            this.Acc1EnchantDisplay.Location = new System.Drawing.Point(782, 418);
+            this.Acc1EnchantDisplay.Location = new System.Drawing.Point(662, 418);
             this.Acc1EnchantDisplay.Name = "Acc1EnchantDisplay";
             this.Acc1EnchantDisplay.Size = new System.Drawing.Size(35, 13);
             this.Acc1EnchantDisplay.TabIndex = 10;
@@ -1532,7 +1525,7 @@ namespace WindowsFormsApp1
             // Acc2EqiupDisplay
             // 
             this.Acc2EqiupDisplay.AutoSize = true;
-            this.Acc2EqiupDisplay.Location = new System.Drawing.Point(937, 298);
+            this.Acc2EqiupDisplay.Location = new System.Drawing.Point(817, 298);
             this.Acc2EqiupDisplay.Name = "Acc2EqiupDisplay";
             this.Acc2EqiupDisplay.Size = new System.Drawing.Size(35, 13);
             this.Acc2EqiupDisplay.TabIndex = 11;
@@ -1541,7 +1534,7 @@ namespace WindowsFormsApp1
             // Acc2EnchantDisplay
             // 
             this.Acc2EnchantDisplay.AutoSize = true;
-            this.Acc2EnchantDisplay.Location = new System.Drawing.Point(946, 311);
+            this.Acc2EnchantDisplay.Location = new System.Drawing.Point(826, 311);
             this.Acc2EnchantDisplay.Name = "Acc2EnchantDisplay";
             this.Acc2EnchantDisplay.Size = new System.Drawing.Size(41, 13);
             this.Acc2EnchantDisplay.TabIndex = 12;
@@ -1550,7 +1543,7 @@ namespace WindowsFormsApp1
             // AmmoEquipDisplay
             // 
             this.AmmoEquipDisplay.AutoSize = true;
-            this.AmmoEquipDisplay.Location = new System.Drawing.Point(937, 334);
+            this.AmmoEquipDisplay.Location = new System.Drawing.Point(817, 334);
             this.AmmoEquipDisplay.Name = "AmmoEquipDisplay";
             this.AmmoEquipDisplay.Size = new System.Drawing.Size(41, 13);
             this.AmmoEquipDisplay.TabIndex = 13;
@@ -1559,7 +1552,7 @@ namespace WindowsFormsApp1
             // AmmoEnchantDisplay
             // 
             this.AmmoEnchantDisplay.AutoSize = true;
-            this.AmmoEnchantDisplay.Location = new System.Drawing.Point(946, 347);
+            this.AmmoEnchantDisplay.Location = new System.Drawing.Point(826, 347);
             this.AmmoEnchantDisplay.Name = "AmmoEnchantDisplay";
             this.AmmoEnchantDisplay.Size = new System.Drawing.Size(41, 13);
             this.AmmoEnchantDisplay.TabIndex = 14;
@@ -1568,7 +1561,7 @@ namespace WindowsFormsApp1
             // MainEquipDisplay
             // 
             this.MainEquipDisplay.AutoSize = true;
-            this.MainEquipDisplay.Location = new System.Drawing.Point(937, 369);
+            this.MainEquipDisplay.Location = new System.Drawing.Point(817, 369);
             this.MainEquipDisplay.Name = "MainEquipDisplay";
             this.MainEquipDisplay.Size = new System.Drawing.Size(41, 13);
             this.MainEquipDisplay.TabIndex = 15;
@@ -1577,7 +1570,7 @@ namespace WindowsFormsApp1
             // MainEnchantDisplay
             // 
             this.MainEnchantDisplay.AutoSize = true;
-            this.MainEnchantDisplay.Location = new System.Drawing.Point(946, 382);
+            this.MainEnchantDisplay.Location = new System.Drawing.Point(826, 382);
             this.MainEnchantDisplay.Name = "MainEnchantDisplay";
             this.MainEnchantDisplay.Size = new System.Drawing.Size(41, 13);
             this.MainEnchantDisplay.TabIndex = 16;
@@ -1586,7 +1579,7 @@ namespace WindowsFormsApp1
             // OffEquipDisplay
             // 
             this.OffEquipDisplay.AutoSize = true;
-            this.OffEquipDisplay.Location = new System.Drawing.Point(937, 404);
+            this.OffEquipDisplay.Location = new System.Drawing.Point(817, 404);
             this.OffEquipDisplay.Name = "OffEquipDisplay";
             this.OffEquipDisplay.Size = new System.Drawing.Size(41, 13);
             this.OffEquipDisplay.TabIndex = 17;
@@ -1595,7 +1588,7 @@ namespace WindowsFormsApp1
             // OffEnchantDisplay
             // 
             this.OffEnchantDisplay.AutoSize = true;
-            this.OffEnchantDisplay.Location = new System.Drawing.Point(946, 417);
+            this.OffEnchantDisplay.Location = new System.Drawing.Point(826, 417);
             this.OffEnchantDisplay.Name = "OffEnchantDisplay";
             this.OffEnchantDisplay.Size = new System.Drawing.Size(41, 13);
             this.OffEnchantDisplay.TabIndex = 18;
@@ -1604,7 +1597,7 @@ namespace WindowsFormsApp1
             // BaseStat
             // 
             this.BaseStat.AutoSize = true;
-            this.BaseStat.Location = new System.Drawing.Point(823, 41);
+            this.BaseStat.Location = new System.Drawing.Point(703, 41);
             this.BaseStat.Name = "BaseStat";
             this.BaseStat.Size = new System.Drawing.Size(31, 13);
             this.BaseStat.TabIndex = 19;
@@ -1613,7 +1606,7 @@ namespace WindowsFormsApp1
             // PercentStat
             // 
             this.PercentStat.AutoSize = true;
-            this.PercentStat.Location = new System.Drawing.Point(873, 41);
+            this.PercentStat.Location = new System.Drawing.Point(753, 41);
             this.PercentStat.Name = "PercentStat";
             this.PercentStat.Size = new System.Drawing.Size(30, 13);
             this.PercentStat.TabIndex = 20;
@@ -1622,7 +1615,7 @@ namespace WindowsFormsApp1
             // TotalStat
             // 
             this.TotalStat.AutoSize = true;
-            this.TotalStat.Location = new System.Drawing.Point(923, 41);
+            this.TotalStat.Location = new System.Drawing.Point(803, 41);
             this.TotalStat.Name = "TotalStat";
             this.TotalStat.Size = new System.Drawing.Size(31, 13);
             this.TotalStat.TabIndex = 21;
@@ -1632,7 +1625,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1186, 476);
+            this.ClientSize = new System.Drawing.Size(976, 501);
             this.Controls.Add(this.TotalStat);
             this.Controls.Add(this.PercentStat);
             this.Controls.Add(this.BaseStat);
@@ -1651,7 +1644,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.BodyEnchantDisplay);
             this.Controls.Add(this.BodyEquipDisplay);
             this.Controls.Add(this.HeadEnchantDisplay);
-            this.Controls.Add(this.HeadEqipDisplay);
+            this.Controls.Add(this.HeadEquipDisplay);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tabControl1);
@@ -1685,239 +1678,9 @@ namespace WindowsFormsApp1
 
         #endregion
 
-        #region Get functions
-        public Enchant getEnchant(string n, HashSet<Enchant> EnList)
-        {
-            foreach (Enchant en in EnList)
-                if (n == en.name)
-                {
-                    return en;
-                }
-            return new Enchant(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, "Error");
-        }
-        #endregion
-
-        #region quick control methods
-        /*
-         Method to populate any set of comboboxes when new equipment selection is made
-         Pass the name of the selected Equipment, the HashSet it belongs to, and a {List} of all the comboboxes it will effect
-        ie: put the 4 boxes for enchants in the {List}
-         */
-
-        public void populateCombo(string n, HashSet<Equipment> EqList, List<System.Windows.Forms.ComboBox> enchBoxs)
-        {
-            Equipment temp = new Equipment();
-            foreach (Equipment en in EqList)
-            {
-                if (en.name == n)
-                {
-                    temp = en;
-                    break;
-                }
-            }
-
-            foreach(System.Windows.Forms.ComboBox eBox in enchBoxs)
-            {
-                foreach (Enchant enc in temp.EnLib) eBox.Items.Add(enc.name);
-            }
-        }
 
 
-
-        /*
-         * Method that returns single string consisting of visible data of all buffs/debuffs of an enchant
-         * Does not show 0's
-         */
-        public string getEnStats(Enchant e)
-        {
-            bool first = true;
-            /*
-            if (e. != 0)
-            {
-                stats += " ";
-                if (e. > 0) stats += "+";
-                stats += e. + "";
-            }
-             */
-            string stats = "";
-
-            if (e.atk_Static != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.atk_Static > 0) stats += "+";
-                stats += e.atk_Static + " Atk";
-            }
-
-            if (e.atk_Percent != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.atk_Percent > 0) stats += "+";
-                stats += e.atk_Percent + "% Atk";
-            }
-
-            if (e.def_Static != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.def_Static > 0) stats += "+";
-                stats += e.def_Static + " Def";
-            }
-            
-            if (e.def_Percent != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-
-                if (e.def_Percent > 0) stats += "+";
-                stats += e.def_Percent + "% Def";
-            }
-
-            if (e.matk_Static != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.matk_Static > 0) stats += "+";
-                stats += e.matk_Static + " MAtk";
-            }
-
-            if (e.matk_Percent != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.matk_Percent > 0) stats += "+";
-                stats += e.matk_Percent + "% MAtk";
-            }
-
-            if (e.crit_Damage != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.crit_Damage > 0) stats += "+";
-                stats += e.crit_Damage + "% Crit dmg";
-            }
-
-            if (e.crit_Chance != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.crit_Chance > 0) stats += "+";
-                stats += e.crit_Chance + "% Crit";
-            }
-
-            if (e.move_Speed != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.move_Speed > 0) stats += "+";
-                stats += e.move_Speed + " Move Spd";
-            }
-
-            if (e.atk_Speed != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.atk_Speed > 0) stats += "+";
-                stats += e.atk_Speed + " Atk Spd";
-            }
-
-            if (e.mana_Static != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.mana_Static > 0) stats += "+";
-                stats += e.mana_Static + " Mana";
-            }
-
-            if (e.mana_Percent != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.mana_Percent > 0) stats += "+";
-                stats += e.mana_Percent + "% Mana";
-            }
-
-            if (e.stam_Static != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.stam_Static > 0) stats += "+";
-                stats += e.stam_Static + " Stam";
-            }
-
-            if (e.stam_Percent != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.stam_Percent > 0) stats += "+";
-                stats += e.stam_Percent + "% Stam";
-            }
-
-            if (e.life_Static != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.life_Static > 0) stats += "+";
-                stats += e.life_Static + " HP";
-            }
-
-            if (e.life_Percent != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.life_Percent > 0) stats += "+";
-                stats += e.life_Percent + "% HP";
-            }
-
-            if (e.hung_Static != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.hung_Static > 0) stats += "+";
-                stats += e.hung_Static + " Sat";
-            }
-
-            if (e.hung_Percent != 0)
-            {
-                if (!first)
-                    stats += ", ";
-                else first = false;
-                if (e.hung_Percent > 0) stats += "+";
-                stats += e.hung_Percent + "% Sat";
-            }
-
-            return stats;
-        }
-
-        private string getEqStats(string n, HashSet<Equipment> eqL)
-        {
-            foreach(Equipment e in eqL)
-            {
-                if (n == e.name)
-                    return e.atk + " ATK, " + e.matk + " MATK, " + e.def + " DEF";
-            }
-            return "Error";
-        }
-
-        #endregion
+        
 
         #region All the variables
         private System.Windows.Forms.TabControl tabControl1;
@@ -2049,7 +1812,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label AtkSpdDisplayStatic;
         private System.Windows.Forms.Label MoveSpdDisplayStatic;
         private System.Windows.Forms.TextBox AtkTotalDyn;
-        private System.Windows.Forms.Label HeadEqipDisplay;
+        private System.Windows.Forms.Label HeadEquipDisplay;
         private System.Windows.Forms.Label HeadEnchantDisplay;
         private System.Windows.Forms.Label BodyEquipDisplay;
         private System.Windows.Forms.Label BodyEnchantDisplay;

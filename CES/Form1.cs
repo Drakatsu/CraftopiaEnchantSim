@@ -226,6 +226,10 @@ namespace WindowsFormsApp1
 
             //populate enchant combo boxes
             populateCombo((string)HeadEquip.SelectedItem, EqLib.Head, new List<ComboBox> { EnchantHead1, EnchantHead2, EnchantHead3, EnchantHead4 });
+
+            //Change Build Readout Summary
+            HeadEquipDisplay.Text = (string)HeadEquip.SelectedItem;
+            //HeadEnchantDisplay.Text = 
         }
 
         private void GliderEquip_SelectedIndexChanged(object sender, EventArgs e)
@@ -328,13 +332,250 @@ namespace WindowsFormsApp1
 
 
         #endregion
-        #region Display Box Handlers
-        
 
 
 
+
+
+        #region Get functions
+        public Enchant getEnchant(string n, HashSet<Enchant> EnList)
+        {
+            foreach (Enchant en in EnList)
+                if (n == en.name)
+                {
+                    return en;
+                }
+            return new Enchant(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, "Error");
+        }
+        #endregion
+
+        #region quick control methods
+        /*
+         Method to populate any set of comboboxes when new equipment selection is made
+         Pass the name of the selected Equipment, the HashSet it belongs to, and a {List} of all the comboboxes it will effect
+        ie: put the 4 boxes for enchants in the {List}
+         */
+
+
+        public void populateCombo(string n, HashSet<Equipment> EqList, List<System.Windows.Forms.ComboBox> enchBoxs)
+        {
+            Equipment temp = new Equipment();
+            foreach (Equipment en in EqList)
+            {
+                if (en.name == n)
+                {
+                    temp = en;
+                    break;
+                }
+            }
+
+            foreach (System.Windows.Forms.ComboBox eBox in enchBoxs)
+            {
+                foreach (Enchant enc in temp.EnLib) eBox.Items.Add(enc.name);
+            }
+        }
+
+
+
+        /*
+         * Method that returns single string consisting of visible data of all buffs/debuffs of an enchant
+         * Does not show 0's
+         */
+        public string getEnStats(Enchant e)
+        {
+            bool first = true;
+            /*
+            if (e. != 0)
+            {
+                stats += " ";
+                if (e. > 0) stats += "+";
+                stats += e. + "";
+            }
+             */
+            string stats = "";
+
+            if (e.atk_Static != 0)
+            {
+                if (!first)
+                    stats += ", ";
+                else first = false;
+                if (e.atk_Static > 0) stats += "+";
+                stats += e.atk_Static + " Atk";
+            }
+
+            if (e.atk_Percent != 0)
+            {
+                if (!first)
+                    stats += ", ";
+                else first = false;
+                if (e.atk_Percent > 0) stats += "+";
+                stats += e.atk_Percent + "% Atk";
+            }
+
+            if (e.def_Static != 0)
+            {
+                if (!first)
+                    stats += ", ";
+                else first = false;
+                if (e.def_Static > 0) stats += "+";
+                stats += e.def_Static + " Def";
+            }
+
+            if (e.def_Percent != 0)
+            {
+                if (!first)
+                    stats += ", ";
+                else first = false;
+
+                if (e.def_Percent > 0) stats += "+";
+                stats += e.def_Percent + "% Def";
+            }
+
+            if (e.matk_Static != 0)
+            {
+                if (!first)
+                    stats += ", ";
+                else first = false;
+                if (e.matk_Static > 0) stats += "+";
+                stats += e.matk_Static + " MAtk";
+            }
+
+            if (e.matk_Percent != 0)
+            {
+                if (!first)
+                    stats += ", ";
+                else first = false;
+                if (e.matk_Percent > 0) stats += "+";
+                stats += e.matk_Percent + "% MAtk";
+            }
+
+            if (e.crit_Damage != 0)
+            {
+                if (!first)
+                    stats += ", ";
+                else first = false;
+                if (e.crit_Damage > 0) stats += "+";
+                stats += e.crit_Damage + "% Crit dmg";
+            }
+
+            if (e.crit_Chance != 0)
+            {
+                if (!first)
+                    stats += ", ";
+                else first = false;
+                if (e.crit_Chance > 0) stats += "+";
+                stats += e.crit_Chance + "% Crit";
+            }
+
+            if (e.move_Speed != 0)
+            {
+                if (!first)
+                    stats += ", ";
+                else first = false;
+                if (e.move_Speed > 0) stats += "+";
+                stats += e.move_Speed + " Move Spd";
+            }
+
+            if (e.atk_Speed != 0)
+            {
+                if (!first)
+                    stats += ", ";
+                else first = false;
+                if (e.atk_Speed > 0) stats += "+";
+                stats += e.atk_Speed + " Atk Spd";
+            }
+
+            if (e.mana_Static != 0)
+            {
+                if (!first)
+                    stats += ", ";
+                else first = false;
+                if (e.mana_Static > 0) stats += "+";
+                stats += e.mana_Static + " Mana";
+            }
+
+            if (e.mana_Percent != 0)
+            {
+                if (!first)
+                    stats += ", ";
+                else first = false;
+                if (e.mana_Percent > 0) stats += "+";
+                stats += e.mana_Percent + "% Mana";
+            }
+
+            if (e.stam_Static != 0)
+            {
+                if (!first)
+                    stats += ", ";
+                else first = false;
+                if (e.stam_Static > 0) stats += "+";
+                stats += e.stam_Static + " Stam";
+            }
+
+            if (e.stam_Percent != 0)
+            {
+                if (!first)
+                    stats += ", ";
+                else first = false;
+                if (e.stam_Percent > 0) stats += "+";
+                stats += e.stam_Percent + "% Stam";
+            }
+
+            if (e.life_Static != 0)
+            {
+                if (!first)
+                    stats += ", ";
+                else first = false;
+                if (e.life_Static > 0) stats += "+";
+                stats += e.life_Static + " HP";
+            }
+
+            if (e.life_Percent != 0)
+            {
+                if (!first)
+                    stats += ", ";
+                else first = false;
+                if (e.life_Percent > 0) stats += "+";
+                stats += e.life_Percent + "% HP";
+            }
+
+            if (e.hung_Static != 0)
+            {
+                if (!first)
+                    stats += ", ";
+                else first = false;
+                if (e.hung_Static > 0) stats += "+";
+                stats += e.hung_Static + " Sat";
+            }
+
+            if (e.hung_Percent != 0)
+            {
+                if (!first)
+                    stats += ", ";
+                else first = false;
+                if (e.hung_Percent > 0) stats += "+";
+                stats += e.hung_Percent + "% Sat";
+            }
+
+            return stats;
+        }
+
+        private string getEqStats(string n, HashSet<Equipment> eqL)
+        {
+            foreach (Equipment e in eqL)
+            {
+                if (n == e.name)
+                    return e.atk + " ATK, " + e.matk + " MATK, " + e.def + " DEF";
+            }
+            return "Error";
+        }
 
         #endregion
 
+
+
     }
+    //private string getEnName()
+
 }
+
