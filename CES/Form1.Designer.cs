@@ -127,7 +127,6 @@ namespace WindowsFormsApp1
             this.PctManaDyn = new System.Windows.Forms.TextBox();
             this.ManaBaseDyn = new System.Windows.Forms.TextBox();
             this.HpTotalDyn = new System.Windows.Forms.TextBox();
-            this.PctHpDyn = new System.Windows.Forms.TextBox();
             this.HpBaseDyn = new System.Windows.Forms.TextBox();
             this.DefTotDyn = new System.Windows.Forms.TextBox();
             this.PctDefDyn = new System.Windows.Forms.TextBox();
@@ -145,6 +144,7 @@ namespace WindowsFormsApp1
             this.StamDisplayStatic = new System.Windows.Forms.Label();
             this.SatietyDisplayStatic = new System.Windows.Forms.Label();
             this.MatkBaseDyn = new System.Windows.Forms.TextBox();
+            this.PctHpDyn = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.CritChanceDyn = new System.Windows.Forms.TextBox();
             this.CritDmgDyn = new System.Windows.Forms.TextBox();
@@ -173,6 +173,7 @@ namespace WindowsFormsApp1
             this.BaseStat = new System.Windows.Forms.Label();
             this.PercentStat = new System.Windows.Forms.Label();
             this.TotalStat = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.Head.SuspendLayout();
             this.Body.SuspendLayout();
@@ -199,7 +200,7 @@ namespace WindowsFormsApp1
             this.tabControl1.Location = new System.Drawing.Point(-2, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(561, 431);
+            this.tabControl1.Size = new System.Drawing.Size(511, 431);
             this.tabControl1.TabIndex = 0;
             // 
             // Head
@@ -217,7 +218,7 @@ namespace WindowsFormsApp1
             this.Head.Location = new System.Drawing.Point(4, 22);
             this.Head.Name = "Head";
             this.Head.Padding = new System.Windows.Forms.Padding(3);
-            this.Head.Size = new System.Drawing.Size(553, 405);
+            this.Head.Size = new System.Drawing.Size(503, 405);
             this.Head.TabIndex = 0;
             this.Head.Text = "Head";
             this.Head.UseVisualStyleBackColor = true;
@@ -322,7 +323,7 @@ namespace WindowsFormsApp1
             this.Body.Location = new System.Drawing.Point(4, 22);
             this.Body.Name = "Body";
             this.Body.Padding = new System.Windows.Forms.Padding(3);
-            this.Body.Size = new System.Drawing.Size(553, 405);
+            this.Body.Size = new System.Drawing.Size(503, 405);
             this.Body.TabIndex = 1;
             this.Body.Text = "Body";
             this.Body.UseVisualStyleBackColor = true;
@@ -431,7 +432,7 @@ namespace WindowsFormsApp1
             this.Glider.Controls.Add(this.GliderEquip);
             this.Glider.Location = new System.Drawing.Point(4, 22);
             this.Glider.Name = "Glider";
-            this.Glider.Size = new System.Drawing.Size(553, 405);
+            this.Glider.Size = new System.Drawing.Size(503, 405);
             this.Glider.TabIndex = 2;
             this.Glider.Text = "Glider";
             this.Glider.UseVisualStyleBackColor = true;
@@ -540,7 +541,7 @@ namespace WindowsFormsApp1
             this.Acc1.Controls.Add(this.Acc1Equip);
             this.Acc1.Location = new System.Drawing.Point(4, 22);
             this.Acc1.Name = "Acc1";
-            this.Acc1.Size = new System.Drawing.Size(553, 405);
+            this.Acc1.Size = new System.Drawing.Size(503, 405);
             this.Acc1.TabIndex = 3;
             this.Acc1.Text = "Acc 1";
             this.Acc1.UseVisualStyleBackColor = true;
@@ -649,7 +650,7 @@ namespace WindowsFormsApp1
             this.Acc2.Controls.Add(this.Acc2Equip);
             this.Acc2.Location = new System.Drawing.Point(4, 22);
             this.Acc2.Name = "Acc2";
-            this.Acc2.Size = new System.Drawing.Size(553, 405);
+            this.Acc2.Size = new System.Drawing.Size(503, 405);
             this.Acc2.TabIndex = 4;
             this.Acc2.Text = "Acc 2";
             this.Acc2.UseVisualStyleBackColor = true;
@@ -758,7 +759,7 @@ namespace WindowsFormsApp1
             this.Ammo.Controls.Add(this.AmmoEquip);
             this.Ammo.Location = new System.Drawing.Point(4, 22);
             this.Ammo.Name = "Ammo";
-            this.Ammo.Size = new System.Drawing.Size(553, 405);
+            this.Ammo.Size = new System.Drawing.Size(503, 405);
             this.Ammo.TabIndex = 5;
             this.Ammo.Text = "Ammo";
             this.Ammo.UseVisualStyleBackColor = true;
@@ -865,7 +866,7 @@ namespace WindowsFormsApp1
             this.MainHand.Controls.Add(this.MainEquip);
             this.MainHand.Location = new System.Drawing.Point(4, 22);
             this.MainHand.Name = "MainHand";
-            this.MainHand.Size = new System.Drawing.Size(553, 405);
+            this.MainHand.Size = new System.Drawing.Size(503, 405);
             this.MainHand.TabIndex = 6;
             this.MainHand.Text = "Main-Hand";
             this.MainHand.UseVisualStyleBackColor = true;
@@ -974,7 +975,7 @@ namespace WindowsFormsApp1
             this.OffHand.Controls.Add(this.OffEquip);
             this.OffHand.Location = new System.Drawing.Point(4, 22);
             this.OffHand.Name = "OffHand";
-            this.OffHand.Size = new System.Drawing.Size(553, 405);
+            this.OffHand.Size = new System.Drawing.Size(503, 405);
             this.OffHand.TabIndex = 7;
             this.OffHand.Text = "Off-Hand";
             this.OffHand.UseVisualStyleBackColor = true;
@@ -1049,7 +1050,7 @@ namespace WindowsFormsApp1
             this.OffEnchant3.Name = "OffEnchant3";
             this.OffEnchant3.Size = new System.Drawing.Size(121, 21);
             this.OffEnchant3.TabIndex = 4;
-            this.OffEnchant3.SelectedIndexChanged += new System.EventHandler(this.OffEnchant4_SelectedIndexChanged);
+            this.OffEnchant3.SelectedIndexChanged += new System.EventHandler(this.OffEnchant3_SelectedIndexChanged);
             // 
             // OffEnchant4
             // 
@@ -1086,7 +1087,6 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.Controls.Add(this.PctManaDyn, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.ManaBaseDyn, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.HpTotalDyn, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.PctHpDyn, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.HpBaseDyn, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.DefTotDyn, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.PctDefDyn, 2, 2);
@@ -1104,7 +1104,8 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.Controls.Add(this.StamDisplayStatic, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.SatietyDisplayStatic, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.MatkBaseDyn, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(650, 60);
+            this.tableLayoutPanel1.Controls.Add(this.PctHpDyn, 2, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(515, 60);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -1196,14 +1197,6 @@ namespace WindowsFormsApp1
             this.HpTotalDyn.Name = "HpTotalDyn";
             this.HpTotalDyn.Size = new System.Drawing.Size(46, 20);
             this.HpTotalDyn.TabIndex = 18;
-            // 
-            // PctHpDyn
-            // 
-            this.PctHpDyn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.PctHpDyn.Location = new System.Drawing.Point(103, 105);
-            this.PctHpDyn.Name = "PctHpDyn";
-            this.PctHpDyn.Size = new System.Drawing.Size(44, 20);
-            this.PctHpDyn.TabIndex = 17;
             // 
             // HpBaseDyn
             // 
@@ -1355,6 +1348,14 @@ namespace WindowsFormsApp1
             this.MatkBaseDyn.Size = new System.Drawing.Size(44, 20);
             this.MatkBaseDyn.TabIndex = 8;
             // 
+            // PctHpDyn
+            // 
+            this.PctHpDyn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.PctHpDyn.Location = new System.Drawing.Point(103, 105);
+            this.PctHpDyn.Name = "PctHpDyn";
+            this.PctHpDyn.Size = new System.Drawing.Size(44, 20);
+            this.PctHpDyn.TabIndex = 17;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -1368,55 +1369,55 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel2.Controls.Add(this.CritDmgDisplayStatic, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.AtkSpdDisplayStatic, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.MoveSpdDisplayStatic, 0, 3);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(858, 61);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(515, 301);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(89, 234);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(133, 103);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // CritChanceDyn
             // 
             this.CritChanceDyn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CritChanceDyn.Location = new System.Drawing.Point(57, 19);
+            this.CritChanceDyn.Location = new System.Drawing.Point(83, 3);
             this.CritChanceDyn.Name = "CritChanceDyn";
-            this.CritChanceDyn.Size = new System.Drawing.Size(29, 20);
+            this.CritChanceDyn.Size = new System.Drawing.Size(47, 20);
             this.CritChanceDyn.TabIndex = 0;
             // 
             // CritDmgDyn
             // 
             this.CritDmgDyn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CritDmgDyn.Location = new System.Drawing.Point(57, 77);
+            this.CritDmgDyn.Location = new System.Drawing.Point(83, 28);
             this.CritDmgDyn.Name = "CritDmgDyn";
-            this.CritDmgDyn.Size = new System.Drawing.Size(29, 20);
+            this.CritDmgDyn.Size = new System.Drawing.Size(47, 20);
             this.CritDmgDyn.TabIndex = 1;
             // 
             // AtkSpdDyn
             // 
             this.AtkSpdDyn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.AtkSpdDyn.Location = new System.Drawing.Point(57, 135);
+            this.AtkSpdDyn.Location = new System.Drawing.Point(83, 53);
             this.AtkSpdDyn.Name = "AtkSpdDyn";
-            this.AtkSpdDyn.Size = new System.Drawing.Size(29, 20);
+            this.AtkSpdDyn.Size = new System.Drawing.Size(47, 20);
             this.AtkSpdDyn.TabIndex = 2;
             // 
             // MoveSpdDyn
             // 
             this.MoveSpdDyn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.MoveSpdDyn.Location = new System.Drawing.Point(57, 194);
+            this.MoveSpdDyn.Location = new System.Drawing.Point(83, 79);
             this.MoveSpdDyn.Name = "MoveSpdDyn";
-            this.MoveSpdDyn.Size = new System.Drawing.Size(29, 20);
+            this.MoveSpdDyn.Size = new System.Drawing.Size(47, 20);
             this.MoveSpdDyn.TabIndex = 3;
             // 
             // CritChDisplayStatic
             // 
             this.CritChDisplayStatic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.CritChDisplayStatic.AutoSize = true;
-            this.CritChDisplayStatic.Location = new System.Drawing.Point(3, 16);
+            this.CritChDisplayStatic.Location = new System.Drawing.Point(3, 6);
             this.CritChDisplayStatic.Name = "CritChDisplayStatic";
-            this.CritChDisplayStatic.Size = new System.Drawing.Size(48, 26);
+            this.CritChDisplayStatic.Size = new System.Drawing.Size(74, 13);
             this.CritChDisplayStatic.TabIndex = 4;
             this.CritChDisplayStatic.Text = "Crit Chance";
             // 
@@ -1424,9 +1425,9 @@ namespace WindowsFormsApp1
             // 
             this.CritDmgDisplayStatic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.CritDmgDisplayStatic.AutoSize = true;
-            this.CritDmgDisplayStatic.Location = new System.Drawing.Point(3, 74);
+            this.CritDmgDisplayStatic.Location = new System.Drawing.Point(3, 31);
             this.CritDmgDisplayStatic.Name = "CritDmgDisplayStatic";
-            this.CritDmgDisplayStatic.Size = new System.Drawing.Size(48, 26);
+            this.CritDmgDisplayStatic.Size = new System.Drawing.Size(74, 13);
             this.CritDmgDisplayStatic.TabIndex = 5;
             this.CritDmgDisplayStatic.Text = "Crit Damage";
             // 
@@ -1434,9 +1435,9 @@ namespace WindowsFormsApp1
             // 
             this.AtkSpdDisplayStatic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.AtkSpdDisplayStatic.AutoSize = true;
-            this.AtkSpdDisplayStatic.Location = new System.Drawing.Point(3, 132);
+            this.AtkSpdDisplayStatic.Location = new System.Drawing.Point(3, 56);
             this.AtkSpdDisplayStatic.Name = "AtkSpdDisplayStatic";
-            this.AtkSpdDisplayStatic.Size = new System.Drawing.Size(48, 26);
+            this.AtkSpdDisplayStatic.Size = new System.Drawing.Size(74, 13);
             this.AtkSpdDisplayStatic.TabIndex = 6;
             this.AtkSpdDisplayStatic.Text = "Atk Speed";
             // 
@@ -1444,160 +1445,152 @@ namespace WindowsFormsApp1
             // 
             this.MoveSpdDisplayStatic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.MoveSpdDisplayStatic.AutoSize = true;
-            this.MoveSpdDisplayStatic.Location = new System.Drawing.Point(3, 191);
+            this.MoveSpdDisplayStatic.Location = new System.Drawing.Point(3, 82);
             this.MoveSpdDisplayStatic.Name = "MoveSpdDisplayStatic";
-            this.MoveSpdDisplayStatic.Size = new System.Drawing.Size(48, 26);
+            this.MoveSpdDisplayStatic.Size = new System.Drawing.Size(74, 13);
             this.MoveSpdDisplayStatic.TabIndex = 7;
             this.MoveSpdDisplayStatic.Text = "Move Speed";
             // 
             // HeadEquipDisplay
             // 
             this.HeadEquipDisplay.AutoSize = true;
-            this.HeadEquipDisplay.Location = new System.Drawing.Point(653, 298);
+            this.HeadEquipDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HeadEquipDisplay.Location = new System.Drawing.Point(756, 65);
             this.HeadEquipDisplay.Name = "HeadEquipDisplay";
-            this.HeadEquipDisplay.Size = new System.Drawing.Size(35, 13);
+            this.HeadEquipDisplay.Size = new System.Drawing.Size(0, 13);
             this.HeadEquipDisplay.TabIndex = 3;
-            this.HeadEquipDisplay.Text = "label1";
             // 
             // HeadEnchantDisplay
             // 
             this.HeadEnchantDisplay.AutoSize = true;
-            this.HeadEnchantDisplay.Location = new System.Drawing.Point(662, 311);
+            this.HeadEnchantDisplay.Location = new System.Drawing.Point(765, 78);
             this.HeadEnchantDisplay.Name = "HeadEnchantDisplay";
-            this.HeadEnchantDisplay.Size = new System.Drawing.Size(35, 13);
+            this.HeadEnchantDisplay.Size = new System.Drawing.Size(0, 13);
             this.HeadEnchantDisplay.TabIndex = 4;
-            this.HeadEnchantDisplay.Text = "label2";
             // 
             // BodyEquipDisplay
             // 
             this.BodyEquipDisplay.AutoSize = true;
-            this.BodyEquipDisplay.Location = new System.Drawing.Point(653, 334);
+            this.BodyEquipDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BodyEquipDisplay.Location = new System.Drawing.Point(756, 96);
             this.BodyEquipDisplay.Name = "BodyEquipDisplay";
-            this.BodyEquipDisplay.Size = new System.Drawing.Size(35, 13);
+            this.BodyEquipDisplay.Size = new System.Drawing.Size(0, 13);
             this.BodyEquipDisplay.TabIndex = 5;
-            this.BodyEquipDisplay.Text = "label3";
             // 
             // BodyEnchantDisplay
             // 
             this.BodyEnchantDisplay.AutoSize = true;
-            this.BodyEnchantDisplay.Location = new System.Drawing.Point(662, 347);
+            this.BodyEnchantDisplay.Location = new System.Drawing.Point(765, 109);
             this.BodyEnchantDisplay.Name = "BodyEnchantDisplay";
-            this.BodyEnchantDisplay.Size = new System.Drawing.Size(35, 13);
+            this.BodyEnchantDisplay.Size = new System.Drawing.Size(0, 13);
             this.BodyEnchantDisplay.TabIndex = 6;
-            this.BodyEnchantDisplay.Text = "label4";
             // 
             // GliderEquipDisplay
             // 
             this.GliderEquipDisplay.AutoSize = true;
-            this.GliderEquipDisplay.Location = new System.Drawing.Point(653, 369);
+            this.GliderEquipDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GliderEquipDisplay.Location = new System.Drawing.Point(756, 136);
             this.GliderEquipDisplay.Name = "GliderEquipDisplay";
-            this.GliderEquipDisplay.Size = new System.Drawing.Size(35, 13);
+            this.GliderEquipDisplay.Size = new System.Drawing.Size(0, 13);
             this.GliderEquipDisplay.TabIndex = 7;
-            this.GliderEquipDisplay.Text = "label5";
             // 
             // GliderEnchantDisplay
             // 
             this.GliderEnchantDisplay.AutoSize = true;
-            this.GliderEnchantDisplay.Location = new System.Drawing.Point(662, 382);
+            this.GliderEnchantDisplay.Location = new System.Drawing.Point(765, 149);
             this.GliderEnchantDisplay.Name = "GliderEnchantDisplay";
-            this.GliderEnchantDisplay.Size = new System.Drawing.Size(35, 13);
+            this.GliderEnchantDisplay.Size = new System.Drawing.Size(0, 13);
             this.GliderEnchantDisplay.TabIndex = 8;
-            this.GliderEnchantDisplay.Text = "label6";
             // 
             // Acc1EquipDisplay
             // 
             this.Acc1EquipDisplay.AutoSize = true;
-            this.Acc1EquipDisplay.Location = new System.Drawing.Point(653, 404);
+            this.Acc1EquipDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Acc1EquipDisplay.Location = new System.Drawing.Point(756, 171);
             this.Acc1EquipDisplay.Name = "Acc1EquipDisplay";
-            this.Acc1EquipDisplay.Size = new System.Drawing.Size(35, 13);
+            this.Acc1EquipDisplay.Size = new System.Drawing.Size(0, 13);
             this.Acc1EquipDisplay.TabIndex = 9;
-            this.Acc1EquipDisplay.Text = "label7";
             // 
             // Acc1EnchantDisplay
             // 
             this.Acc1EnchantDisplay.AutoSize = true;
-            this.Acc1EnchantDisplay.Location = new System.Drawing.Point(662, 418);
+            this.Acc1EnchantDisplay.Location = new System.Drawing.Point(765, 185);
             this.Acc1EnchantDisplay.Name = "Acc1EnchantDisplay";
-            this.Acc1EnchantDisplay.Size = new System.Drawing.Size(35, 13);
+            this.Acc1EnchantDisplay.Size = new System.Drawing.Size(0, 13);
             this.Acc1EnchantDisplay.TabIndex = 10;
-            this.Acc1EnchantDisplay.Text = "label8";
             // 
             // Acc2EquipDisplay
             // 
             this.Acc2EquipDisplay.AutoSize = true;
-            this.Acc2EquipDisplay.Location = new System.Drawing.Point(817, 298);
+            this.Acc2EquipDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Acc2EquipDisplay.Location = new System.Drawing.Point(756, 205);
             this.Acc2EquipDisplay.Name = "Acc2EquipDisplay";
-            this.Acc2EquipDisplay.Size = new System.Drawing.Size(35, 13);
+            this.Acc2EquipDisplay.Size = new System.Drawing.Size(0, 13);
             this.Acc2EquipDisplay.TabIndex = 11;
-            this.Acc2EquipDisplay.Text = "label9";
             // 
             // Acc2EnchantDisplay
             // 
             this.Acc2EnchantDisplay.AutoSize = true;
-            this.Acc2EnchantDisplay.Location = new System.Drawing.Point(826, 311);
+            this.Acc2EnchantDisplay.Location = new System.Drawing.Point(765, 218);
             this.Acc2EnchantDisplay.Name = "Acc2EnchantDisplay";
-            this.Acc2EnchantDisplay.Size = new System.Drawing.Size(41, 13);
+            this.Acc2EnchantDisplay.Size = new System.Drawing.Size(0, 13);
             this.Acc2EnchantDisplay.TabIndex = 12;
-            this.Acc2EnchantDisplay.Text = "label10";
             // 
             // AmmoEquipDisplay
             // 
             this.AmmoEquipDisplay.AutoSize = true;
-            this.AmmoEquipDisplay.Location = new System.Drawing.Point(817, 334);
+            this.AmmoEquipDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AmmoEquipDisplay.Location = new System.Drawing.Point(756, 241);
             this.AmmoEquipDisplay.Name = "AmmoEquipDisplay";
-            this.AmmoEquipDisplay.Size = new System.Drawing.Size(41, 13);
+            this.AmmoEquipDisplay.Size = new System.Drawing.Size(0, 13);
             this.AmmoEquipDisplay.TabIndex = 13;
-            this.AmmoEquipDisplay.Text = "label11";
             // 
             // AmmoEnchantDisplay
             // 
             this.AmmoEnchantDisplay.AutoSize = true;
-            this.AmmoEnchantDisplay.Location = new System.Drawing.Point(826, 347);
+            this.AmmoEnchantDisplay.Location = new System.Drawing.Point(765, 254);
             this.AmmoEnchantDisplay.Name = "AmmoEnchantDisplay";
-            this.AmmoEnchantDisplay.Size = new System.Drawing.Size(41, 13);
+            this.AmmoEnchantDisplay.Size = new System.Drawing.Size(0, 13);
             this.AmmoEnchantDisplay.TabIndex = 14;
-            this.AmmoEnchantDisplay.Text = "label12";
             // 
             // MainEquipDisplay
             // 
             this.MainEquipDisplay.AutoSize = true;
-            this.MainEquipDisplay.Location = new System.Drawing.Point(817, 369);
+            this.MainEquipDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainEquipDisplay.Location = new System.Drawing.Point(756, 276);
             this.MainEquipDisplay.Name = "MainEquipDisplay";
-            this.MainEquipDisplay.Size = new System.Drawing.Size(41, 13);
+            this.MainEquipDisplay.Size = new System.Drawing.Size(0, 13);
             this.MainEquipDisplay.TabIndex = 15;
-            this.MainEquipDisplay.Text = "label13";
             // 
             // MainEnchantDisplay
             // 
             this.MainEnchantDisplay.AutoSize = true;
-            this.MainEnchantDisplay.Location = new System.Drawing.Point(826, 382);
+            this.MainEnchantDisplay.Location = new System.Drawing.Point(765, 289);
             this.MainEnchantDisplay.Name = "MainEnchantDisplay";
-            this.MainEnchantDisplay.Size = new System.Drawing.Size(41, 13);
+            this.MainEnchantDisplay.Size = new System.Drawing.Size(0, 13);
             this.MainEnchantDisplay.TabIndex = 16;
-            this.MainEnchantDisplay.Text = "label14";
             // 
             // OffEquipDisplay
             // 
             this.OffEquipDisplay.AutoSize = true;
-            this.OffEquipDisplay.Location = new System.Drawing.Point(817, 404);
+            this.OffEquipDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OffEquipDisplay.Location = new System.Drawing.Point(756, 311);
             this.OffEquipDisplay.Name = "OffEquipDisplay";
-            this.OffEquipDisplay.Size = new System.Drawing.Size(41, 13);
+            this.OffEquipDisplay.Size = new System.Drawing.Size(0, 13);
             this.OffEquipDisplay.TabIndex = 17;
-            this.OffEquipDisplay.Text = "label15";
             // 
             // OffEnchantDisplay
             // 
             this.OffEnchantDisplay.AutoSize = true;
-            this.OffEnchantDisplay.Location = new System.Drawing.Point(826, 417);
+            this.OffEnchantDisplay.Location = new System.Drawing.Point(765, 324);
             this.OffEnchantDisplay.Name = "OffEnchantDisplay";
-            this.OffEnchantDisplay.Size = new System.Drawing.Size(41, 13);
+            this.OffEnchantDisplay.Size = new System.Drawing.Size(0, 13);
             this.OffEnchantDisplay.TabIndex = 18;
-            this.OffEnchantDisplay.Text = "label16";
             // 
             // BaseStat
             // 
             this.BaseStat.AutoSize = true;
-            this.BaseStat.Location = new System.Drawing.Point(703, 41);
+            this.BaseStat.Location = new System.Drawing.Point(568, 41);
             this.BaseStat.Name = "BaseStat";
             this.BaseStat.Size = new System.Drawing.Size(31, 13);
             this.BaseStat.TabIndex = 19;
@@ -1606,7 +1599,7 @@ namespace WindowsFormsApp1
             // PercentStat
             // 
             this.PercentStat.AutoSize = true;
-            this.PercentStat.Location = new System.Drawing.Point(753, 41);
+            this.PercentStat.Location = new System.Drawing.Point(618, 41);
             this.PercentStat.Name = "PercentStat";
             this.PercentStat.Size = new System.Drawing.Size(30, 13);
             this.PercentStat.TabIndex = 20;
@@ -1615,17 +1608,30 @@ namespace WindowsFormsApp1
             // TotalStat
             // 
             this.TotalStat.AutoSize = true;
-            this.TotalStat.Location = new System.Drawing.Point(803, 41);
+            this.TotalStat.Location = new System.Drawing.Point(668, 41);
             this.TotalStat.Name = "TotalStat";
             this.TotalStat.Size = new System.Drawing.Size(31, 13);
             this.TotalStat.TabIndex = 21;
             this.TotalStat.Text = "Total";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(651, 380);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(118, 17);
+            this.checkBox1.TabIndex = 22;
+            this.checkBox1.Text = "Dungeon Enchants";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Visible = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.CheatingCheck_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 501);
+            this.ClientSize = new System.Drawing.Size(1034, 495);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.TotalStat);
             this.Controls.Add(this.PercentStat);
             this.Controls.Add(this.BaseStat);
@@ -1650,6 +1656,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.Head.ResumeLayout(false);
             this.Head.PerformLayout();
@@ -1831,6 +1838,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label BaseStat;
         private System.Windows.Forms.Label PercentStat;
         private System.Windows.Forms.Label TotalStat;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

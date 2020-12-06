@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
     {
         //Create EquipmentLibrary Object to contain all backend info
         readonly EquipmentLibrary EqLib = new EquipmentLibrary();
-        bool Cheating = false;
+        bool cheating = false;
 
         //Define Backend Ints to hold data
         public int
@@ -275,6 +275,13 @@ namespace WindowsFormsApp1
             MainLS = reshow(MainLS, (string)MainEquip.SelectedItem, (string)MainEnchant1.SelectedItem, (string)MainEnchant2.SelectedItem, (string)MainEnchant3.SelectedItem, (string)MainEnchant4.SelectedItem, MainEquipDisplay, MainEnchantDisplay);
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
         private void MainEnchant3_SelectedIndexChanged(object sender, EventArgs e)
         {
             EnchantStatMain3.Text = getEnStats(getEnchant((string)MainEnchant3.SelectedItem, EqLib.getAllEnchants()));
@@ -1084,6 +1091,9 @@ namespace WindowsFormsApp1
 
             return occur;
         }
+
+        private void CheatingCheck_CheckedChanged(object sender, EventArgs e) => cheating = true;
+
 
     }
 
