@@ -364,7 +364,6 @@ namespace WindowsFormsApp1
             //show equipment stats
             EquipStatBody.Text = getEqStats( BodyEquipCurrent, EqLib.Body);
 
-            //add this to all Equip Selection Change handlers
             //clear enchant combo box selections
             BodyEnchant1.SelectedIndex = -1; EnchantStatBody1.Text = "";
             BodyEnchant2.SelectedIndex = -1; EnchantStatBody2.Text = "";
@@ -518,15 +517,11 @@ namespace WindowsFormsApp1
                     return eq;
                 }
             }
-            return new Equipment("Error", 0, 0, 0, new HashSet<Material> { });
+            return new Equipment("None", 0, 0, 0, new HashSet<Material> { });
         }
         #endregion
 
         #region Quick control methods
-        /*
-         * Method that returns single string consisting of visible data of all buffs/debuffs of an enchant
-         * Does not show 0's
-         */
         /*
          Method to populate any set of comboboxes when new equipment selection is made
          Pass the name of the selected Equipment, the HashSet it belongs to, and a {List} of all the comboboxes it will effect
@@ -549,11 +544,12 @@ namespace WindowsFormsApp1
 
             foreach (ComboBox eBox in enchBoxs)
             {
-                foreach (Enchant enc in temp.EnLib) eBox.Items.Add(enc.name);
+                if (!cheating)
+                    foreach (Enchant enc in temp.EnLib) eBox.Items.Add(enc.name);
+                else
+                    foreach (Enchant enc in EqLib.getAllEnchants()) eBox.Items.Add(enc.name);
             }
         }
-
-
 
         //Method that returns single string consisting of visible data of all buffs/debuffs of an enchant
         //Does not show 0's
@@ -1022,7 +1018,7 @@ namespace WindowsFormsApp1
             if ((e4 != e1) && (e4 != e2) && (e4 != e3)) encs += e4;
             es.Text = encs;
         }
-        #endregion
+        
 
         //Composite method to streamline
         public List<string> reshow(List<string> ls, string n, string e1, string e2, string e3, string e4, System.Windows.Forms.Label na, System.Windows.Forms.Label es)
@@ -1092,7 +1088,45 @@ namespace WindowsFormsApp1
             return occur;
         }
 
-        private void CheatingCheck_CheckedChanged(object sender, EventArgs e) => cheating = true;
+        #endregion
+        
+        private void CheatingCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!cheating) cheating = true; else cheating = false;
+
+            //clear and refill Head
+            HeadEquip.SelectedIndex = -1;
+            HeadEquip_SelectedIndexChanged(null, null);
+
+            //clear and refill Body
+            BodyEquip.SelectedIndex = -1;
+            BodyEquip_SelectedIndexChanged(null, null);
+
+            //clear and refill Glider
+            GliderEquip.SelectedIndex = -1;
+            GliderEquip_SelectedIndexChanged(null, null);
+
+            //clear and refill Acc1
+            Acc1Equip.SelectedIndex = -1;
+            Acc1Equip_SelectedIndexChanged(null, null);
+
+            //clear and refill Acc2
+            Acc2Equip.SelectedIndex = -1;
+            Acc2Equip_SelectedIndexChanged(null, null);
+
+            //clear and refill Ammo
+            AmmoEquip.SelectedIndex = -1;
+            AmmoEquip_SelectedIndexChanged(null, null);
+
+            //Clear and refill Main Hand
+            MainEquip.SelectedIndex = -1;
+            MainEquip_SelectedIndexChanged(null, null);
+
+            //Clear and refill Off Hand
+            OffEquip.SelectedIndex = -1;
+            OffEquip_SelectedIndexChanged(null, null);
+
+        }
 
 
     }
