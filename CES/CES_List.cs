@@ -5,6 +5,7 @@ using System.Text;
 
 namespace CES_List
 {
+
 	public class Enchant
 	{
 		public int atk_Static, atk_Percent, def_Static, def_Percent, matk_Static, matk_Percent,
@@ -71,6 +72,23 @@ namespace CES_List
 	}
 
 	public class EquipmentLibrary {
+		public HashSet<Enchant> getAllEnchants()
+        {
+			return dungeon.EnList;
+        }
+
+		public HashSet<Equipment> allEq = new HashSet<Equipment>();
+		public void AllEqBuild()
+		{
+			allEq.UnionWith(Head);
+			allEq.UnionWith(Body);
+			allEq.UnionWith(Glider);
+			allEq.UnionWith(Acc);
+			allEq.UnionWith(Ammo);
+			allEq.UnionWith(MainHand);
+			allEq.UnionWith(OffHand);
+		}
+
 		/*******************************************
 						Enchantments
 		********************************************/
@@ -290,9 +308,9 @@ namespace CES_List
 			fish = new Material("Fish", new HashSet<Enchant> { ID108, ID107 }),
 
 			dungeon = new Material("Dungeon Find or Modded", new HashSet<Enchant> {
-										 ID006, ID007, ID011, ID012, ID015, ID018, ID020, ID025, ID027, ID028, ID029, ID031, ID032, ID034,
+										 ID006, ID007, ID008, ID011, ID012, ID015, ID018, ID020, ID025, ID027, ID028, ID029, ID031, ID032, ID034,
 										 ID035, ID037, ID038, ID044, ID046, ID049, ID051, ID052, ID054, ID059, ID066, ID068, ID070, ID071,
-										 ID072, ID073, ID081, ID083, ID086, ID090, ID091, ID093, ID094, ID095, ID096, ID103, ID105, ID107,
+										 ID072, ID073, ID081, ID083, ID086, ID089, ID090, ID091, ID093, ID094, ID095, ID096, ID103, ID105, ID107,
 										 ID108, ID109, ID110, ID115, ID116, ID117, ID118, ID119, ID120, ID121, ID122, ID123, ID125, ID126,
 										 ID127, ID128, ID129, ID130, ID131, ID132, ID133, ID134, ID135, ID136, ID137, ID138, ID139, ID140,
 										 ID141, ID160, ID161, ID162, ID164, ID165, ID166, ID167, ID168, ID169, ID170 });
@@ -319,7 +337,7 @@ namespace CES_List
 		//Body Slot
 		static Equipment
 			Cape = new Equipment("Orange/Green Cape", 0, 0, 5, new HashSet<Material> { leather }),
-			LArmor = new Equipment("", 0, 0, 5, new HashSet<Material> { leather, iron });
+			LArmor = new Equipment("Black/White Light Armor", 0, 0, 5, new HashSet<Material> { leather, iron });
 
 		public HashSet<Equipment> Body = new HashSet<Equipment> { Cape, LArmor };
 
@@ -437,4 +455,5 @@ namespace CES_List
 		public HashSet<Equipment> OffHand = new HashSet<Equipment> { Torch1h, MonPrism, Bucket, CopShield, IronShield, SlvShield, StlShield, TitShield, GoldShield, PlatShield };
 	#endregion
 	}
+
 }
